@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +55,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBServices.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model_COFFEESTORE.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_COFFEESTORE.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_COFFEESTORE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_COFFEESTORE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_COFFEESTORE.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Product_ADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product_ADO.Designer.cs">
+      <DependentUpon>Product_ADO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product_LINQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product_LINQ.Designer.cs">
+      <DependentUpon>Product_LINQ.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblACCOUNT.cs">
+      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblBILL.cs">
+      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblBILL_INFO.cs">
+      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblCATEGORY.cs">
+      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblEMPLOYEE.cs">
+      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblPRODUCT.cs">
+      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTABLE.cs">
+      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Product_ADO.resx">
+      <DependentUpon>Product_ADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product_LINQ.resx">
+      <DependentUpon>Product_LINQ.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +136,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="Model_COFFEESTORE.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model_COFFEESTORE.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model_COFFEESTORE.edmx.diagram">
+      <DependentUpon>Model_COFFEESTORE.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +156,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model_COFFEESTORE.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model_COFFEESTORE.Context.cs</LastGenOutput>
+      <DependentUpon>Model_COFFEESTORE.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model_COFFEESTORE.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_COFFEESTORE.edmx</DependentUpon>
+      <LastGenOutput>Model_COFFEESTORE.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

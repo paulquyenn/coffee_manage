@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0dc324f737ba49948fa5a26e2803e5ac" Name="Diagram1">
+        <EntityTypeShape EntityType="COFFEESTOREModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEESTOREModel.tblACCOUNT" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEESTOREModel.tblBILL" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEESTOREModel.tblBILL_INFO" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEESTOREModel.tblCATEGORY" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEESTOREModel.tblEMPLOYEE" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEESTOREModel.tblPRODUCT" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEESTOREModel.tblTABLE" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="COFFEESTOREModel.FK__tblBILL__Employe__7F2BE32F" ManuallyRouted="false" />
+        <AssociationConnector Association="COFFEESTOREModel.FK__tblBILL__TableID__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="COFFEESTOREModel.FK__tblBILL_I__BillI__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="COFFEESTOREModel.FK__tblBILL_I__Produ__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="COFFEESTOREModel.FK__tblPRODUC__Categ__7A672E12" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
