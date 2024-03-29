@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectdotNET
 {
-    public partial class Form1 : Form
+    public partial class Bill_ADO : Form
     {
-        public Form1()
+        public Bill_ADO()
         {
             InitializeComponent();
         }
