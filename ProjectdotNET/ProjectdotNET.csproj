@@ -55,12 +55,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="DBServices.cs" />
     <Compile Include="Form1.cs">
+=======
+    <Compile Include="COFFEE.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COFFEE.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COFFEE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COFFEE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COFFEE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COFFEE.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DBServices.cs" />
+    <Compile Include="FormCategoryADO.cs">
+>>>>>>> 3a6c4260fdc9899585a5462def16b2f6b7c2590e
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormCategoryADO.Designer.cs">
+      <DependentUpon>FormCategoryADO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCategoryLinQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategoryLinQ.Designer.cs">
+      <DependentUpon>FormCategoryLinQ.cs</DependentUpon>
     </Compile>
     <Compile Include="Model_COFFEESTORE.Context.cs">
       <AutoGen>True</AutoGen>
@@ -91,6 +117,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
     </Compile>
@@ -126,12 +153,41 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Product_LINQ.resx">
       <DependentUpon>Product_LINQ.cs</DependentUpon>
+=======
+    <Compile Include="tblACCOUNT.cs">
+      <DependentUpon>COFFEE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblBILL.cs">
+      <DependentUpon>COFFEE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblBILL_INFO.cs">
+      <DependentUpon>COFFEE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblCATEGORIES.cs">
+      <DependentUpon>COFFEE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblEMPLOYEE.cs">
+      <DependentUpon>COFFEE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblPRODUCT.cs">
+      <DependentUpon>COFFEE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTABLE.cs">
+      <DependentUpon>COFFEE.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormCategoryADO.resx">
+      <DependentUpon>FormCategoryADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategoryLinQ.resx">
+      <DependentUpon>FormCategoryLinQ.cs</DependentUpon>
+>>>>>>> 3a6c4260fdc9899585a5462def16b2f6b7c2590e
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+<<<<<<< HEAD
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -142,12 +198,25 @@
     </EntityDeploy>
     <None Include="Model_COFFEESTORE.edmx.diagram">
       <DependentUpon>Model_COFFEESTORE.edmx</DependentUpon>
+=======
+    <EntityDeploy Include="COFFEE.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>COFFEE.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="COFFEE.edmx.diagram">
+      <DependentUpon>COFFEE.edmx</DependentUpon>
+>>>>>>> 3a6c4260fdc9899585a5462def16b2f6b7c2590e
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -158,6 +227,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Model_COFFEESTORE.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model_COFFEESTORE.Context.cs</LastGenOutput>
@@ -167,6 +237,20 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model_COFFEESTORE.edmx</DependentUpon>
       <LastGenOutput>Model_COFFEESTORE.cs</LastGenOutput>
+=======
+    <None Include="Resources\coffee-shop-logo-branding-vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="COFFEE.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>COFFEE.Context.cs</LastGenOutput>
+      <DependentUpon>COFFEE.edmx</DependentUpon>
+    </Content>
+    <Content Include="COFFEE.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>COFFEE.edmx</DependentUpon>
+      <LastGenOutput>COFFEE.cs</LastGenOutput>
+>>>>>>> 3a6c4260fdc9899585a5462def16b2f6b7c2590e
     </Content>
   </ItemGroup>
   <ItemGroup>

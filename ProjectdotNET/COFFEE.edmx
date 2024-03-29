@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="COFFEESTOREModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblACCOUNT">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="Password" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="TypeAccount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblBILL">
+          <Key>
+            <PropertyRef Name="BillID" />
+          </Key>
+          <Property Name="BillID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="OrderDate" Type="date" />
+          <Property Name="TableID" Type="int" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tblBILL_INFO">
+          <Key>
+            <PropertyRef Name="BillID" />
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="BillID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" />
+        </EntityType>
+        <EntityType Name="tblCATEGORY">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="30" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="tblEMPLOYEE">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Sex" Type="char" MaxLength="5" />
+          <Property Name="BirthDate" Type="date" />
+          <Property Name="Phone" Type="char" MaxLength="10" />
+          <Property Name="Address" Type="nvarchar" MaxLength="30" />
+          <Property Name="Position" Type="nvarchar" MaxLength="30" />
+          <Property Name="Salary" Type="money" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="tblPRODUCT">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="30" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="tblTABLE">
+          <Key>
+            <PropertyRef Name="TableID" />
+          </Key>
+          <Property Name="TableID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK__tblBILL__Employe__4316F928">
+          <End Role="tblEMPLOYEE" Type="Self.tblEMPLOYEE" Multiplicity="0..1" />
+          <End Role="tblBILL" Type="Self.tblBILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEMPLOYEE">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="tblBILL">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblBILL__TableID__440B1D61">
+          <End Role="tblTABLE" Type="Self.tblTABLE" Multiplicity="0..1" />
+          <End Role="tblBILL" Type="Self.tblBILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTABLE">
+              <PropertyRef Name="TableID" />
+            </Principal>
+            <Dependent Role="tblBILL">
+              <PropertyRef Name="TableID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblBILL_I__BillI__46E78A0C">
+          <End Role="tblBILL" Type="Self.tblBILL" Multiplicity="1" />
+          <End Role="tblBILL_INFO" Type="Self.tblBILL_INFO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblBILL">
+              <PropertyRef Name="BillID" />
+            </Principal>
+            <Dependent Role="tblBILL_INFO">
+              <PropertyRef Name="BillID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblBILL_I__Produ__47DBAE45">
+          <End Role="tblPRODUCT" Type="Self.tblPRODUCT" Multiplicity="1" />
+          <End Role="tblBILL_INFO" Type="Self.tblBILL_INFO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblPRODUCT">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="tblBILL_INFO">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblPRODUC__Categ__3E52440B">
+          <End Role="tblCATEGORY" Type="Self.tblCATEGORY" Multiplicity="0..1" />
+          <End Role="tblPRODUCT" Type="Self.tblPRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCATEGORY">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="tblPRODUCT">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="COFFEESTOREModelStoreContainer">
+          <EntitySet Name="tblACCOUNT" EntityType="Self.tblACCOUNT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblBILL" EntityType="Self.tblBILL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblBILL_INFO" EntityType="Self.tblBILL_INFO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCATEGORY" EntityType="Self.tblCATEGORY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblEMPLOYEE" EntityType="Self.tblEMPLOYEE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblPRODUCT" EntityType="Self.tblPRODUCT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTABLE" EntityType="Self.tblTABLE" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__tblBILL__Employe__4316F928" Association="Self.FK__tblBILL__Employe__4316F928">
+            <End Role="tblEMPLOYEE" EntitySet="tblEMPLOYEE" />
+            <End Role="tblBILL" EntitySet="tblBILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblBILL__TableID__440B1D61" Association="Self.FK__tblBILL__TableID__440B1D61">
+            <End Role="tblTABLE" EntitySet="tblTABLE" />
+            <End Role="tblBILL" EntitySet="tblBILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblBILL_I__BillI__46E78A0C" Association="Self.FK__tblBILL_I__BillI__46E78A0C">
+            <End Role="tblBILL" EntitySet="tblBILL" />
+            <End Role="tblBILL_INFO" EntitySet="tblBILL_INFO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblBILL_I__Produ__47DBAE45" Association="Self.FK__tblBILL_I__Produ__47DBAE45">
+            <End Role="tblPRODUCT" EntitySet="tblPRODUCT" />
+            <End Role="tblBILL_INFO" EntitySet="tblBILL_INFO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblPRODUC__Categ__3E52440B" Association="Self.FK__tblPRODUC__Categ__3E52440B">
+            <End Role="tblCATEGORY" EntitySet="tblCATEGORY" />
+            <End Role="tblPRODUCT" EntitySet="tblPRODUCT" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="COFFEESTOREModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblACCOUNT">
+          <Key>
+            <PropertyRef Name="AccountID" />
+          </Key>
+          <Property Name="AccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TypeAccount" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblBILL">
+          <Key>
+            <PropertyRef Name="BillID" />
+          </Key>
+          <Property Name="BillID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="OrderDate" Type="DateTime" Precision="0" />
+          <Property Name="TableID" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblEMPLOYEE" Relationship="Self.FK__tblBILL__Employe__4316F928" FromRole="tblBILL" ToRole="tblEMPLOYEE" />
+          <NavigationProperty Name="tblTABLE" Relationship="Self.FK__tblBILL__TableID__440B1D61" FromRole="tblBILL" ToRole="tblTABLE" />
+          <NavigationProperty Name="tblBILL_INFO" Relationship="Self.FK__tblBILL_I__BillI__46E78A0C" FromRole="tblBILL" ToRole="tblBILL_INFO" />
+        </EntityType>
+        <EntityType Name="tblBILL_INFO">
+          <Key>
+            <PropertyRef Name="BillID" />
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="BillID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <NavigationProperty Name="tblBILL" Relationship="Self.FK__tblBILL_I__BillI__46E78A0C" FromRole="tblBILL_INFO" ToRole="tblBILL" />
+          <NavigationProperty Name="tblPRODUCT" Relationship="Self.FK__tblBILL_I__Produ__47DBAE45" FromRole="tblBILL_INFO" ToRole="tblPRODUCT" />
+        </EntityType>
+        <EntityType Name="tblCATEGORY">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblPRODUCT" Relationship="Self.FK__tblPRODUC__Categ__3E52440B" FromRole="tblCATEGORY" ToRole="tblPRODUCT" />
+        </EntityType>
+        <EntityType Name="tblEMPLOYEE">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sex" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="BirthDate" Type="DateTime" Precision="0" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Salary" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblBILL" Relationship="Self.FK__tblBILL__Employe__4316F928" FromRole="tblEMPLOYEE" ToRole="tblBILL" />
+        </EntityType>
+        <EntityType Name="tblPRODUCT">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Unit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblBILL_INFO" Relationship="Self.FK__tblBILL_I__Produ__47DBAE45" FromRole="tblPRODUCT" ToRole="tblBILL_INFO" />
+          <NavigationProperty Name="tblCATEGORY" Relationship="Self.FK__tblPRODUC__Categ__3E52440B" FromRole="tblPRODUCT" ToRole="tblCATEGORY" />
+        </EntityType>
+        <EntityType Name="tblTABLE">
+          <Key>
+            <PropertyRef Name="TableID" />
+          </Key>
+          <Property Name="TableID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblBILL" Relationship="Self.FK__tblBILL__TableID__440B1D61" FromRole="tblTABLE" ToRole="tblBILL" />
+        </EntityType>
+        <Association Name="FK__tblBILL__Employe__4316F928">
+          <End Role="tblEMPLOYEE" Type="Self.tblEMPLOYEE" Multiplicity="0..1" />
+          <End Role="tblBILL" Type="Self.tblBILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEMPLOYEE">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="tblBILL">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblBILL__TableID__440B1D61">
+          <End Role="tblTABLE" Type="Self.tblTABLE" Multiplicity="0..1" />
+          <End Role="tblBILL" Type="Self.tblBILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTABLE">
+              <PropertyRef Name="TableID" />
+            </Principal>
+            <Dependent Role="tblBILL">
+              <PropertyRef Name="TableID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblBILL_I__BillI__46E78A0C">
+          <End Role="tblBILL" Type="Self.tblBILL" Multiplicity="1" />
+          <End Role="tblBILL_INFO" Type="Self.tblBILL_INFO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblBILL">
+              <PropertyRef Name="BillID" />
+            </Principal>
+            <Dependent Role="tblBILL_INFO">
+              <PropertyRef Name="BillID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblBILL_I__Produ__47DBAE45">
+          <End Role="tblPRODUCT" Type="Self.tblPRODUCT" Multiplicity="1" />
+          <End Role="tblBILL_INFO" Type="Self.tblBILL_INFO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblPRODUCT">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="tblBILL_INFO">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tblPRODUC__Categ__3E52440B">
+          <End Role="tblCATEGORY" Type="Self.tblCATEGORY" Multiplicity="0..1" />
+          <End Role="tblPRODUCT" Type="Self.tblPRODUCT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCATEGORY">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="tblPRODUCT">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="COFFEESTOREEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblACCOUNT" EntityType="Self.tblACCOUNT" />
+          <EntitySet Name="tblBILL" EntityType="Self.tblBILL" />
+          <EntitySet Name="tblBILL_INFO" EntityType="Self.tblBILL_INFO" />
+          <EntitySet Name="tblCATEGORY" EntityType="Self.tblCATEGORY" />
+          <EntitySet Name="tblEMPLOYEE" EntityType="Self.tblEMPLOYEE" />
+          <EntitySet Name="tblPRODUCT" EntityType="Self.tblPRODUCT" />
+          <EntitySet Name="tblTABLE" EntityType="Self.tblTABLE" />
+          <AssociationSet Name="FK__tblBILL__Employe__4316F928" Association="Self.FK__tblBILL__Employe__4316F928">
+            <End Role="tblEMPLOYEE" EntitySet="tblEMPLOYEE" />
+            <End Role="tblBILL" EntitySet="tblBILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblBILL__TableID__440B1D61" Association="Self.FK__tblBILL__TableID__440B1D61">
+            <End Role="tblTABLE" EntitySet="tblTABLE" />
+            <End Role="tblBILL" EntitySet="tblBILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblBILL_I__BillI__46E78A0C" Association="Self.FK__tblBILL_I__BillI__46E78A0C">
+            <End Role="tblBILL" EntitySet="tblBILL" />
+            <End Role="tblBILL_INFO" EntitySet="tblBILL_INFO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblBILL_I__Produ__47DBAE45" Association="Self.FK__tblBILL_I__Produ__47DBAE45">
+            <End Role="tblPRODUCT" EntitySet="tblPRODUCT" />
+            <End Role="tblBILL_INFO" EntitySet="tblBILL_INFO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tblPRODUC__Categ__3E52440B" Association="Self.FK__tblPRODUC__Categ__3E52440B">
+            <End Role="tblCATEGORY" EntitySet="tblCATEGORY" />
+            <End Role="tblPRODUCT" EntitySet="tblPRODUCT" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="COFFEESTOREModelStoreContainer" CdmEntityContainer="COFFEESTOREEntities">
+          <EntitySetMapping Name="tblACCOUNT">
+            <EntityTypeMapping TypeName="COFFEESTOREModel.tblACCOUNT">
+              <MappingFragment StoreEntitySet="tblACCOUNT">
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="TypeAccount" ColumnName="TypeAccount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblBILL">
+            <EntityTypeMapping TypeName="COFFEESTOREModel.tblBILL">
+              <MappingFragment StoreEntitySet="tblBILL">
+                <ScalarProperty Name="BillID" ColumnName="BillID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="TableID" ColumnName="TableID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblBILL_INFO">
+            <EntityTypeMapping TypeName="COFFEESTOREModel.tblBILL_INFO">
+              <MappingFragment StoreEntitySet="tblBILL_INFO">
+                <ScalarProperty Name="BillID" ColumnName="BillID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCATEGORY">
+            <EntityTypeMapping TypeName="COFFEESTOREModel.tblCATEGORY">
+              <MappingFragment StoreEntitySet="tblCATEGORY">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEMPLOYEE">
+            <EntityTypeMapping TypeName="COFFEESTOREModel.tblEMPLOYEE">
+              <MappingFragment StoreEntitySet="tblEMPLOYEE">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPRODUCT">
+            <EntityTypeMapping TypeName="COFFEESTOREModel.tblPRODUCT">
+              <MappingFragment StoreEntitySet="tblPRODUCT">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTABLE">
+            <EntityTypeMapping TypeName="COFFEESTOREModel.tblTABLE">
+              <MappingFragment StoreEntitySet="tblTABLE">
+                <ScalarProperty Name="TableID" ColumnName="TableID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
