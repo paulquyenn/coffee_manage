@@ -41,7 +41,7 @@ namespace ProjectdotNET
 
         private void LoadGridData()
         {
-            string sql = "SELECT * FROM tblCATEGORIES";
+            string sql = "SELECT * FROM tblCATEGORY";
             dgvCategoryADO.DataSource = db.getData(sql);
             setEnable(false);
         }
@@ -78,15 +78,15 @@ namespace ProjectdotNET
             string de = rtbDescription.Text;
             if( AddNew )
             {
-                string sql = string.Format("INSERT INTO tblCATEGORIES (CategoryName, Description) VALUES " + 
+                string sql = string.Format("INSERT INTO tblCATEGORY (CategoryName, Description) VALUES " + 
                     "(N'{0}', N'{1}')", cn, de);
                 db.runQuery(sql);
                 LoadGridData();
             }
             else
             {
-                int id = int.Parse (txbCategoryID.Text);
-                string sql = string.Format("UPDATE tblCATEGORIES SET " +
+                int id = int.Parse(txbCategoryID.Text);
+                string sql = string.Format("UPDATE tblCATEGORY SET " +
                     "CategoryName=N'{0}'," +
                     "Description=N'{1}' WHERE CategoryID={2}", cn, de, id);
                 db.runQuery(sql);
@@ -106,7 +106,7 @@ namespace ProjectdotNET
                 MessageBoxButtons.OKCancel ) == DialogResult.OK )
             {
                 int id = int.Parse( txbCategoryID.Text );
-                string sql = string.Format("DELETE FROM tblCATEGORIES WHERE CategoryID={0}" , id);
+                string sql = string.Format("DELETE FROM tblCATEGORY WHERE CategoryID={0}" , id);
                 db.runQuery(sql);
                 LoadGridData();
             }

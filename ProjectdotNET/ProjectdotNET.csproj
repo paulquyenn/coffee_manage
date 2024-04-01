@@ -83,20 +83,11 @@
     <Compile Include="FormCategoryLinQ.Designer.cs">
       <DependentUpon>FormCategoryLinQ.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model_COFFEESTORE.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model_COFFEESTORE.Context.tt</DependentUpon>
+    <Compile Include="FormEmployeeADO.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Model_COFFEESTORE.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model_COFFEESTORE.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model_COFFEESTORE.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model_COFFEESTORE.edmx</DependentUpon>
+    <Compile Include="FormEmployeeADO.Designer.cs">
+      <DependentUpon>FormEmployeeADO.cs</DependentUpon>
     </Compile>
     <Compile Include="Product_ADO.cs">
       <SubType>Form</SubType>
@@ -121,7 +112,7 @@
     <Compile Include="tblBILL_INFO.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblCATEGORIES.cs">
+    <Compile Include="tblCATEGORY.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
     <Compile Include="tblEMPLOYEE.cs">
@@ -138,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCategoryLinQ.resx">
       <DependentUpon>FormCategoryLinQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmployeeADO.resx">
+      <DependentUpon>FormEmployeeADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -174,19 +168,19 @@
     <None Include="Resources\coffee-shop-logo-branding-vector.png" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="COFFEE.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>COFFEE.Context.cs</LastGenOutput>
       <DependentUpon>COFFEE.edmx</DependentUpon>
+      <LastGenOutput>COFFEE.Context.cs</LastGenOutput>
     </Content>
     <Content Include="COFFEE.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>COFFEE.edmx</DependentUpon>
       <LastGenOutput>COFFEE.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

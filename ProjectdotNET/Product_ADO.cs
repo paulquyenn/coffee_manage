@@ -28,7 +28,7 @@ namespace ProjectdotNET
 
         private void LayDuLieu()
         {
-            dgvProduct.DataSource = db.GetData("SELECT * FROM tblPRODUCT");
+            dgvProduct.DataSource = db.getData("SELECT * FROM tblPRODUCT");
         }
 
         private void LayDulieuCategory()
@@ -36,7 +36,7 @@ namespace ProjectdotNET
             string sql = "SELECT * FROM tblCATEGORY";
             cbCategoryID.DisplayMember = "CategoryName";
             cbCategoryID.ValueMember = "CategoryID";
-            cbCategoryID.DataSource = db.GetData(sql);
+            cbCategoryID.DataSource = db.getData(sql);
         }
 
         private void dgvProduct_CellEnter(object sender, DataGridViewCellEventArgs e)
