@@ -31,6 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvEmployeeADO = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.tbPosition = new System.Windows.Forms.TextBox();
             this.tbAddress = new System.Windows.Forms.TextBox();
             this.tbPhone = new System.Windows.Forms.TextBox();
-            this.tbBirthDate = new System.Windows.Forms.TextBox();
             this.tbGender = new System.Windows.Forms.TextBox();
             this.tbEmployeeName = new System.Windows.Forms.TextBox();
             this.tbEmployeeID = new System.Windows.Forms.TextBox();
@@ -85,6 +85,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dtpBirthDate);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
@@ -105,7 +106,6 @@
             this.panel1.Controls.Add(this.tbPosition);
             this.panel1.Controls.Add(this.tbAddress);
             this.panel1.Controls.Add(this.tbPhone);
-            this.panel1.Controls.Add(this.tbBirthDate);
             this.panel1.Controls.Add(this.tbGender);
             this.panel1.Controls.Add(this.tbEmployeeName);
             this.panel1.Controls.Add(this.tbEmployeeID);
@@ -114,6 +114,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(366, 642);
             this.panel1.TabIndex = 1;
+            // 
+            // dtpBirthDate
+            // 
+            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBirthDate.Location = new System.Drawing.Point(150, 153);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(200, 26);
+            this.dtpBirthDate.TabIndex = 24;
             // 
             // label9
             // 
@@ -292,13 +300,6 @@
             this.tbPhone.Size = new System.Drawing.Size(198, 26);
             this.tbPhone.TabIndex = 3;
             // 
-            // tbBirthDate
-            // 
-            this.tbBirthDate.Location = new System.Drawing.Point(152, 153);
-            this.tbBirthDate.Name = "tbBirthDate";
-            this.tbBirthDate.Size = new System.Drawing.Size(198, 26);
-            this.tbBirthDate.TabIndex = 2;
-            // 
             // tbGender
             // 
             this.tbGender.Location = new System.Drawing.Point(152, 110);
@@ -328,6 +329,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEmployeeADO";
             this.Text = "Nhân viên ADO";
@@ -366,8 +368,8 @@
         private System.Windows.Forms.TextBox tbPosition;
         private System.Windows.Forms.TextBox tbAddress;
         private System.Windows.Forms.TextBox tbPhone;
-        private System.Windows.Forms.TextBox tbBirthDate;
         private System.Windows.Forms.TextBox tbGender;
         private System.Windows.Forms.TextBox tbEmployeeName;
+        private System.Windows.Forms.DateTimePicker dtpBirthDate;
     }
 }

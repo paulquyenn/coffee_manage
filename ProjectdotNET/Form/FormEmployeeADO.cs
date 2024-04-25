@@ -24,7 +24,7 @@ namespace ProjectdotNET
             tbEmployeeID.Enabled = false;
             tbEmployeeName.Enabled = check;
             tbGender.Enabled = check;
-            tbBirthDate.Enabled = check;
+            dtpBirthDate.Enabled = check;
             tbPhone.Enabled = check;
             tbAddress.Enabled = check;
             tbPosition.Enabled = check;
@@ -56,15 +56,15 @@ namespace ProjectdotNET
             int i = e.RowIndex;
             if (i >= 0)
             {
-                tbEmployeeID.Text = dgvEmployeeADO.Rows[i].Cells[i].Value.ToString();
-                tbEmployeeName.Text = dgvEmployeeADO.Rows[i].Cells[i].Value.ToString();
-                tbGender.Text = dgvEmployeeADO.Rows[i].Cells[i].Value.ToString();
-                tbBirthDate.Text = dgvEmployeeADO.Rows[i].Cells[i].Value.ToString();
-                tbPhone.Text = dgvEmployeeADO.Rows[i].Cells[i].Value.ToString();
-                tbAddress.Text = dgvEmployeeADO.Rows[i].Cells[i].Value.ToString();
-                tbPosition.Text = dgvEmployeeADO.Rows[i].Cells[i].Value.ToString();
-                tbSalary.Text = dgvEmployeeADO.Rows[i].Cells[i].Value.ToString();
-                rtbDescription.Text = dgvEmployeeADO.Rows[i].Cells[i].Value.ToString();
+                tbEmployeeID.Text = dgvEmployeeADO.Rows[i].Cells["EmployeeID"].Value.ToString();
+                tbEmployeeName.Text = dgvEmployeeADO.Rows[i].Cells["EmployeeName"].Value.ToString();
+                tbGender.Text = dgvEmployeeADO.Rows[i].Cells["Gender"].Value.ToString();
+                dtpBirthDate.Text = dgvEmployeeADO.Rows[i].Cells["BirthDate"].Value.ToString();
+                tbPhone.Text = dgvEmployeeADO.Rows[i].Cells["Phone"].Value.ToString();
+                tbAddress.Text = dgvEmployeeADO.Rows[i].Cells["Address"].Value.ToString();
+                tbPosition.Text = dgvEmployeeADO.Rows[i].Cells["Position"].Value.ToString();
+                tbSalary.Text = dgvEmployeeADO.Rows[i].Cells["Salary"].Value.ToString();
+                rtbDescription.Text = dgvEmployeeADO.Rows[i].Cells["Description"].Value.ToString();
             }
         }
 
@@ -80,7 +80,6 @@ namespace ProjectdotNET
             tbEmployeeID.Clear();
             tbEmployeeName.Clear();
             tbGender.Clear();
-            tbBirthDate.Clear();
             tbPhone.Clear();
             tbAddress.Clear();
             tbPosition.Clear();
@@ -90,7 +89,7 @@ namespace ProjectdotNET
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if ( tbEmployeeName.Text.Trim() == "")
+            if (tbEmployeeName.Text.Trim() == "")
             {
                 MessageBox.Show("Thông tin nhân viên không được để trống!", "Thông báo");
                 tbEmployeeName.Focus();
@@ -98,31 +97,31 @@ namespace ProjectdotNET
             }
             string en = tbEmployeeName.Text;
             string gd = tbGender.Text;
-            string bd = tbBirthDate.Text;
+            string bd = dtpBirthDate.Text;
             string ph = tbPhone.Text;
             string ar = tbAddress.Text;
             string po = tbPosition.Text;
-            string sa = tbSalary.Text;
+            decimal sa = decimal.Parse(tbSalary.Text);
             string de = rtbDescription.Text;
             if (AddNew)
             {
                 string sql = string.Format("INSERT INTO tblEMPLOYEE (EmployeeName, Gender, BirthDate, Phone, Address, Position, Salary, Description) VALUES " +
-                    "(N'{0}', N'{1}', N'{2}', N'{3}', N'{4}', N'{5}', N'{6}', N'{7}')", en, gd, bd, ph, ar, po, sa, de);
+                    "(N'{0}', N'{1}', '{2}', N'{3}', N'{4}', N'{5}', {6}, N'{7}')", en, gd, bd, ph, ar, po, sa, de);
                 db.runQuery(sql);
                 LoadGridData();
             }
             else
             {
                 int id = int.Parse(tbEmployeeID.Text);
-                string sql = string.Format("update tblEmployee set" +
+                string sql = string.Format("UPDATE tblEmployee SET " +
                     "EmployeeName=N'{0}', " +
                     "Gender=N'{1}', " +
-                    "BirthDate=N'{2}', " +
+                    "BirthDate='{2}', " +
                     "Phone=N'{3}', " +
                     "Address=N'{4}', " +
                     "Position=N'{5}', " +
                     "Salary=N'{6}', " +
-                    "Description=N'{7}' where EmployeeID={8} ", en, gd, bd, ph, ar, po, sa, de, id);
+                    "Description=N'{7}' WHERE EmployeeID={8} ", en, gd, bd, ph, ar, po, sa, de, id);
                 db.runQuery(sql);
                 LoadGridData();
             }

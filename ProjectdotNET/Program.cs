@@ -18,7 +18,9 @@ namespace ProjectdotNET
             Application.SetCompatibleTextRenderingDefault(false);
             /*Application.Run(new FormCategoryADO());*/
             /*Application.Run(new FormCategoryLinQ());*/
-            Application.Run(new FormEmployeeADO());
+            /*            Application.Run(new FormEmployeeADO());
+                        Application.Run(new FormEmployeeLinQ());*/
+            Application.Run(new fLogin());
         }
     }
 }

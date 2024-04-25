@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Account.cs" />
     <Compile Include="COFFEE.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,23 +71,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COFFEE.edmx</DependentUpon>
     </Compile>
-    <Compile Include="DBServices.cs" />
-    <Compile Include="FormCategoryADO.cs">
+    <Compile Include="Class\DBServices.cs" />
+    <Compile Include="Class\DataProvider.cs" />
+    <Compile Include="Form\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCategoryADO.Designer.cs">
+    <Compile Include="Form\fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTableADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTableADO.Designer.cs">
+      <DependentUpon>FormTableADO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormEmployeeLinQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormEmployeeLinQ.Designer.cs">
+      <DependentUpon>FormEmployeeLinQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormCategoryADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormCategoryADO.Designer.cs">
       <DependentUpon>FormCategoryADO.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCategoryLinQ.cs">
+    <Compile Include="Form\FormCategoryLinQ.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCategoryLinQ.Designer.cs">
+    <Compile Include="Form\FormCategoryLinQ.Designer.cs">
       <DependentUpon>FormCategoryLinQ.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEmployeeADO.cs">
+    <Compile Include="Form\FormEmployeeADO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEmployeeADO.Designer.cs">
+    <Compile Include="Form\FormEmployeeADO.Designer.cs">
       <DependentUpon>FormEmployeeADO.cs</DependentUpon>
     </Compile>
     <Compile Include="Product_ADO.cs">
@@ -124,13 +150,25 @@
     <Compile Include="tblTABLE.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormCategoryADO.resx">
+    <EmbeddedResource Include="Form\fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTableADO.resx">
+      <DependentUpon>FormTableADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormEmployeeLinQ.resx">
+      <DependentUpon>FormEmployeeLinQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormCategoryADO.resx">
       <DependentUpon>FormCategoryADO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCategoryLinQ.resx">
+    <EmbeddedResource Include="Form\FormCategoryLinQ.resx">
       <DependentUpon>FormCategoryLinQ.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEmployeeADO.resx">
+    <EmbeddedResource Include="Form\FormEmployeeADO.resx">
       <DependentUpon>FormEmployeeADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -182,5 +220,6 @@
       <LastGenOutput>COFFEE.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
