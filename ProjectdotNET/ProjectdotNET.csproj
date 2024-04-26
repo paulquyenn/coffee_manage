@@ -55,10 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <Compile Include="Class\Account.cs" />
->>>>>>> quyenpaul
     <Compile Include="COFFEE.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,14 +71,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COFFEE.edmx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="DBServices.cs" />
-    <Compile Include="FormCategoryADO.cs">
-=======
     <Compile Include="Class\DBServices.cs" />
     <Compile Include="Class\DataProvider.cs" />
     <Compile Include="Form\fMain.cs">
->>>>>>> quyenpaul
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\fMain.Designer.cs">
@@ -146,11 +138,7 @@
     <Compile Include="tblBILL_INFO.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="tblCATEGORIES.cs">
-=======
     <Compile Include="tblCATEGORY.cs">
->>>>>>> quyenpaul
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
     <Compile Include="tblEMPLOYEE.cs">
@@ -162,9 +150,6 @@
     <Compile Include="tblTABLE.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <EmbeddedResource Include="FormCategoryADO.resx">
-=======
     <EmbeddedResource Include="Form\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,17 +163,13 @@
       <DependentUpon>FormEmployeeLinQ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCategoryADO.resx">
->>>>>>> quyenpaul
       <DependentUpon>FormCategoryADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCategoryLinQ.resx">
       <DependentUpon>FormCategoryLinQ.cs</DependentUpon>
-<<<<<<< HEAD
-=======
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormEmployeeADO.resx">
       <DependentUpon>FormEmployeeADO.cs</DependentUpon>
->>>>>>> quyenpaul
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
