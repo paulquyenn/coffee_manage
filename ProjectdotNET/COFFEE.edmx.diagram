@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6b5e82df17354d458f786c023a5b21c6" Name="Diagram1">
-        <EntityTypeShape EntityType="COFFEESTOREModel.tblACCOUNT" Width="1.5" PointX="3.5" PointY="4.125" IsExpanded="true" />
+      <Diagram DiagramId="831d3ff88cf64aceb1c9c86be5c11565" Name="Diagram1">
+        <EntityTypeShape EntityType="COFFEESTOREModel.tblACCOUNT" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="COFFEESTOREModel.tblBILL" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="COFFEESTOREModel.tblBILL_INFO" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="COFFEESTOREModel.tblCATEGORY" Width="1.5" PointX="8.625" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEESTOREModel.tblCATEGORY" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="COFFEESTOREModel.tblEMPLOYEE" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="COFFEESTOREModel.tblPRODUCT" Width="1.5" PointX="6.5" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="COFFEESTOREModel.tblTABLE" Width="1.5" PointX="1" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEESTOREModel.tblPRODUCT" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="COFFEESTOREModel.tblTABLE" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
         <AssociationConnector Association="COFFEESTOREModel.FK__tblBILL__Employe__4316F928" ManuallyRouted="false" />
         <AssociationConnector Association="COFFEESTOREModel.FK__tblBILL__TableID__440B1D61" ManuallyRouted="false" />
         <AssociationConnector Association="COFFEESTOREModel.FK__tblBILL_I__BillI__46E78A0C" ManuallyRouted="false" />

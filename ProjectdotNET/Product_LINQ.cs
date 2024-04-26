@@ -39,7 +39,7 @@ namespace ProjectdotNET
             string sql = "SELECT * FROM tblCATEGORY";
             cbCategoryID.DisplayMember = "CategoryName";
             cbCategoryID.ValueMember = "CategoryID";
-            cbCategoryID.DataSource = db.GetData(sql);
+            cbCategoryID.DataSource = db.getData(sql);
         }
 
         private void dgvProduct_CellEnter(object sender, DataGridViewCellEventArgs e)

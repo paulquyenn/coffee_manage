@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectdotNET
 {
-    public partial class FormEmployeeADO : Form
+    public partial class FormTableADO : Form
     {
-        public FormEmployeeADO()
+        public FormTableADO()
         {
             InitializeComponent();
         }
