@@ -27,7 +27,7 @@ namespace ProjectdotNET
                 fMain formMain = new fMain();
                 this.Hide();
                 formMain.ShowDialog();
-                this.Close();
+                this.Show();
             }
             else
             {

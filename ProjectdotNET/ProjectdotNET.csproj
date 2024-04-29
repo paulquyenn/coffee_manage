@@ -73,6 +73,12 @@
     </Compile>
     <Compile Include="Class\DBServices.cs" />
     <Compile Include="Class\DataProvider.cs" />
+    <Compile Include="fBill_ADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBill_ADO.Designer.cs">
+      <DependentUpon>fBill_ADO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +121,11 @@
     <Compile Include="Form\FormEmployeeADO.Designer.cs">
       <DependentUpon>FormEmployeeADO.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product_ADO.cs">
+    <Compile Include="Form\fProduct_ADO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product_ADO.Designer.cs">
-      <DependentUpon>Product_ADO.cs</DependentUpon>
+    <Compile Include="Form\fProduct_ADO.Designer.cs">
+      <DependentUpon>fProduct_ADO.cs</DependentUpon>
     </Compile>
     <Compile Include="Product_LINQ.cs">
       <SubType>Form</SubType>
@@ -150,6 +156,9 @@
     <Compile Include="tblTABLE.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fBill_ADO.resx">
+      <DependentUpon>fBill_ADO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormEmployeeADO.resx">
       <DependentUpon>FormEmployeeADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fProduct_ADO.resx">
+      <DependentUpon>fProduct_ADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -41,5 +41,16 @@ namespace ProjectdotNET
                 frm.Height = pnlMain.Height;
             }
         }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            fProduct_ADO fproduct_ADO = new fProduct_ADO();
+            fproduct_ADO.TopLevel = false;
+
+            pnlMain.Controls.Add(fproduct_ADO);
+
+            fproduct_ADO.BringToFront();
+            fproduct_ADO.Show();
+        }
     }
 }

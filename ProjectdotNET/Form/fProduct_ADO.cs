@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectdotNET
 {
-    public partial class Product_ADO : Form
+    public partial class fProduct_ADO : Form
     {
-        public Product_ADO()
+        public fProduct_ADO()
         {
             InitializeComponent();
         }
