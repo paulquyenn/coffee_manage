@@ -102,6 +102,7 @@
             this.btnBill.TabIndex = 3;
             this.btnBill.Text = "Hóa Đơn";
             this.btnBill.UseVisualStyleBackColor = true;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnBill_Info
             // 
@@ -112,6 +113,7 @@
             this.btnBill_Info.TabIndex = 4;
             this.btnBill_Info.Text = "Chi Tiết Hóa Đơn";
             this.btnBill_Info.UseVisualStyleBackColor = true;
+            this.btnBill_Info.Click += new System.EventHandler(this.btnBill_Info_Click);
             // 
             // btnTable
             // 

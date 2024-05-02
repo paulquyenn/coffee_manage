@@ -22,6 +22,8 @@ namespace ProjectdotNET
                         Application.Run(new FormEmployeeLinQ());*/
             Application.Run(new fLogin());
             //Application.Run(new Product_ADO());
+            //Application.Run(new fBill_ADO());
+            //Application.Run(new fBillinfo());
         }
     }
 }
