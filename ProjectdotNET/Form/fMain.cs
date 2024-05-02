@@ -39,5 +39,38 @@ namespace ProjectdotNET
         {
             OpenChildForm(new FormEmployeeADO());
         }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            fProduct_ADO fproduct_ADO = new fProduct_ADO();
+            fproduct_ADO.TopLevel = false;
+
+            pnlMain.Controls.Add(fproduct_ADO);
+
+            fproduct_ADO.BringToFront();
+            fproduct_ADO.Show();
+        }
+
+        private void btnBill_Info_Click(object sender, EventArgs e)
+        {
+            fBillinfo fbillinfo = new fBillinfo();
+            fbillinfo.TopLevel = false;
+
+            pnlMain.Controls.Add(fbillinfo);
+
+            fbillinfo.BringToFront();
+            fbillinfo.Show();
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            fBill_ADO fbill = new fBill_ADO();
+            fbill.TopLevel = false;
+
+            pnlMain.Controls.Add(fbill);
+
+            fbill.BringToFront();
+            fbill.Show();
+        }
     }
 }

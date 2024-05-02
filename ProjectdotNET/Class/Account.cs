@@ -19,11 +19,13 @@ namespace ProjectdotNET
 
         private Account() { }
 
+        DBServices db = new DBServices();
+
         public bool Login(string userName, string passWord)
         {
             string query = "SELECT * FROM tblACCOUNT WHERE UserName = N'" + userName + "' AND Password = N'" + passWord + "' ";
 
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            DataTable result = db.getData(query);
 
             return result.Rows.Count > 0;
         }
