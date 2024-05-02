@@ -102,6 +102,7 @@
             this.btnCategory.TabIndex = 2;
             this.btnCategory.Text = "Loại sản phẩm";
             this.btnCategory.UseVisualStyleBackColor = true;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // btnBill
             // 

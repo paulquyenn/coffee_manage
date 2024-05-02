@@ -73,10 +73,10 @@
     </Compile>
     <Compile Include="Class\DBServices.cs" />
     <Compile Include="Class\DataProvider.cs" />
-    <Compile Include="fBillinfo.cs">
+    <Compile Include="Form\fBillinfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fBillinfo.Designer.cs">
+    <Compile Include="Form\fBillinfo.Designer.cs">
       <DependentUpon>fBillinfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\fBill_ADO.cs">
@@ -109,11 +109,11 @@
     <Compile Include="Form\FormEmployeeLinQ.Designer.cs">
       <DependentUpon>FormEmployeeLinQ.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormCategoryADO.cs">
+    <Compile Include="Form\fCategoryADO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FormCategoryADO.Designer.cs">
-      <DependentUpon>FormCategoryADO.cs</DependentUpon>
+    <Compile Include="Form\fCategoryADO.Designer.cs">
+      <DependentUpon>fCategoryADO.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormCategoryLinQ.cs">
       <SubType>Form</SubType>
@@ -164,7 +164,7 @@
     <Compile Include="tblTABLE.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="fBillinfo.resx">
+    <EmbeddedResource Include="Form\fBillinfo.resx">
       <DependentUpon>fBillinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\fBill_ADO.resx">
@@ -182,8 +182,8 @@
     <EmbeddedResource Include="Form\FormEmployeeLinQ.resx">
       <DependentUpon>FormEmployeeLinQ.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormCategoryADO.resx">
-      <DependentUpon>FormCategoryADO.cs</DependentUpon>
+    <EmbeddedResource Include="Form\fCategoryADO.resx">
+      <DependentUpon>fCategoryADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCategoryLinQ.resx">
       <DependentUpon>FormCategoryLinQ.cs</DependentUpon>

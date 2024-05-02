@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace ProjectdotNET
 {
-    public partial class FormCategoryADO : Form
+    public partial class fCategoryADO : Form
     {
         DBServices db = new DBServices();
         bool AddNew = false;
 
-        public FormCategoryADO()
+        public fCategoryADO()
         {
             InitializeComponent();
         }
