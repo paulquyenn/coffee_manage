@@ -17,29 +17,27 @@ namespace ProjectdotNET
             InitializeComponent();
         }
 
-        private void btnEmployee_Click(object sender, EventArgs e)
+        private Form currentChildForm;
+
+        private void OpenChildForm(Form childForm)
         {
-            FormEmployeeADO formEmployeeADO = new FormEmployeeADO();
-            formEmployeeADO = new FormEmployeeADO();
-
-            formEmployeeADO.TopLevel = false;
-            formEmployeeADO.FormBorderStyle = FormBorderStyle.None;
-            formEmployeeADO.Dock = DockStyle.Fill;
-
-            pnlMain.Controls.Add( formEmployeeADO );
-
-            formEmployeeADO.BringToFront();
-            formEmployeeADO.Show();
+            if(currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlMain.Controls.Add(childForm);
+            pnlMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
-        private void pnlMain_Resize(object sender, EventArgs e)
+        private void btnEmployee_Click(object sender, EventArgs e)
         {
-            foreach( Control item in pnlMain.Controls)
-            {
-                var frm = (Form)item;
-                frm.Width = pnlMain.Width;
-                frm.Height = pnlMain.Height;
-            }
+            OpenChildForm(new FormEmployeeADO());
         }
     }
 }

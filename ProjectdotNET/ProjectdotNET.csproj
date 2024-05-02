@@ -129,6 +129,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Class\Table.cs" />
+    <Compile Include="Class\TableDAO.cs" />
     <Compile Include="tblACCOUNT.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>

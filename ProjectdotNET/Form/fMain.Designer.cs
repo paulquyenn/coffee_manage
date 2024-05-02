@@ -76,6 +76,7 @@
             // 
             // btnProduct
             // 
+            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProduct.Location = new System.Drawing.Point(0, 160);
             this.btnProduct.Margin = new System.Windows.Forms.Padding(0);
             this.btnProduct.Name = "btnProduct";
@@ -86,6 +87,7 @@
             // 
             // btnCategory
             // 
+            this.btnCategory.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCategory.Location = new System.Drawing.Point(0, 230);
             this.btnCategory.Margin = new System.Windows.Forms.Padding(0);
             this.btnCategory.Name = "btnCategory";
@@ -96,6 +98,7 @@
             // 
             // btnBill
             // 
+            this.btnBill.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBill.Location = new System.Drawing.Point(0, 300);
             this.btnBill.Margin = new System.Windows.Forms.Padding(0);
             this.btnBill.Name = "btnBill";
@@ -106,6 +109,7 @@
             // 
             // btnBill_Info
             // 
+            this.btnBill_Info.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBill_Info.Location = new System.Drawing.Point(0, 370);
             this.btnBill_Info.Margin = new System.Windows.Forms.Padding(0);
             this.btnBill_Info.Name = "btnBill_Info";
@@ -116,6 +120,7 @@
             // 
             // btnTable
             // 
+            this.btnTable.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTable.Location = new System.Drawing.Point(0, 440);
             this.btnTable.Margin = new System.Windows.Forms.Padding(0);
             this.btnTable.Name = "btnTable";
@@ -126,6 +131,7 @@
             // 
             // btnEmployee
             // 
+            this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmployee.Location = new System.Drawing.Point(0, 510);
             this.btnEmployee.Margin = new System.Windows.Forms.Padding(0);
             this.btnEmployee.Name = "btnEmployee";
@@ -137,6 +143,7 @@
             // 
             // btnAccount
             // 
+            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAccount.Location = new System.Drawing.Point(0, 580);
             this.btnAccount.Margin = new System.Windows.Forms.Padding(0);
             this.btnAccount.Name = "btnAccount";
@@ -147,9 +154,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Tomato;
             this.panel1.Controls.Add(this.lbHome);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(254, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
@@ -159,21 +166,21 @@
             // lbHome
             // 
             this.lbHome.AutoSize = true;
-            this.lbHome.Font = new System.Drawing.Font("SVN-Androgyne", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHome.Font = new System.Drawing.Font("Consolas", 49.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHome.Location = new System.Drawing.Point(319, 22);
             this.lbHome.Name = "lbHome";
-            this.lbHome.Size = new System.Drawing.Size(411, 108);
+            this.lbHome.Size = new System.Drawing.Size(456, 97);
             this.lbHome.TabIndex = 0;
             this.lbHome.Text = "Trang Chủ";
+            this.lbHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlMain
             // 
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMain.Location = new System.Drawing.Point(254, 160);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1034, 595);
             this.pnlMain.TabIndex = 3;
-            this.pnlMain.Resize += new System.EventHandler(this.pnlMain_Resize);
             // 
             // fMain
             // 
@@ -184,6 +191,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
