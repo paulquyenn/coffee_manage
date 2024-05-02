@@ -74,12 +74,7 @@
             // 
             // btnProduct
             // 
-<<<<<<< HEAD
-            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProduct.Location = new System.Drawing.Point(0, 160);
-=======
             this.btnProduct.Location = new System.Drawing.Point(0, 122);
->>>>>>> 0dd71a584735590afb98c8b1f9b49589d80c1f27
             this.btnProduct.Margin = new System.Windows.Forms.Padding(0);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(186, 70);
@@ -90,12 +85,7 @@
             // 
             // btnCategory
             // 
-<<<<<<< HEAD
-            this.btnCategory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCategory.Location = new System.Drawing.Point(0, 230);
-=======
             this.btnCategory.Location = new System.Drawing.Point(0, 192);
->>>>>>> 0dd71a584735590afb98c8b1f9b49589d80c1f27
             this.btnCategory.Margin = new System.Windows.Forms.Padding(0);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(186, 70);
@@ -105,12 +95,7 @@
             // 
             // btnBill
             // 
-<<<<<<< HEAD
-            this.btnBill.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBill.Location = new System.Drawing.Point(0, 300);
-=======
             this.btnBill.Location = new System.Drawing.Point(0, 262);
->>>>>>> 0dd71a584735590afb98c8b1f9b49589d80c1f27
             this.btnBill.Margin = new System.Windows.Forms.Padding(0);
             this.btnBill.Name = "btnBill";
             this.btnBill.Size = new System.Drawing.Size(186, 70);
@@ -121,12 +106,7 @@
             // 
             // btnBill_Info
             // 
-<<<<<<< HEAD
-            this.btnBill_Info.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBill_Info.Location = new System.Drawing.Point(0, 370);
-=======
             this.btnBill_Info.Location = new System.Drawing.Point(0, 332);
->>>>>>> 0dd71a584735590afb98c8b1f9b49589d80c1f27
             this.btnBill_Info.Margin = new System.Windows.Forms.Padding(0);
             this.btnBill_Info.Name = "btnBill_Info";
             this.btnBill_Info.Size = new System.Drawing.Size(186, 70);
@@ -137,12 +117,7 @@
             // 
             // btnTable
             // 
-<<<<<<< HEAD
-            this.btnTable.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTable.Location = new System.Drawing.Point(0, 440);
-=======
             this.btnTable.Location = new System.Drawing.Point(0, 402);
->>>>>>> 0dd71a584735590afb98c8b1f9b49589d80c1f27
             this.btnTable.Margin = new System.Windows.Forms.Padding(0);
             this.btnTable.Name = "btnTable";
             this.btnTable.Size = new System.Drawing.Size(186, 70);
@@ -152,12 +127,7 @@
             // 
             // btnEmployee
             // 
-<<<<<<< HEAD
-            this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 510);
-=======
             this.btnEmployee.Location = new System.Drawing.Point(0, 472);
->>>>>>> 0dd71a584735590afb98c8b1f9b49589d80c1f27
             this.btnEmployee.Margin = new System.Windows.Forms.Padding(0);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(186, 70);
@@ -168,12 +138,7 @@
             // 
             // btnAccount
             // 
-<<<<<<< HEAD
-            this.btnAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAccount.Location = new System.Drawing.Point(0, 580);
-=======
             this.btnAccount.Location = new System.Drawing.Point(0, 542);
->>>>>>> 0dd71a584735590afb98c8b1f9b49589d80c1f27
             this.btnAccount.Margin = new System.Windows.Forms.Padding(0);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Size = new System.Drawing.Size(186, 70);
@@ -181,51 +146,22 @@
             this.btnAccount.Text = "Tài Khoản";
             this.btnAccount.UseVisualStyleBackColor = true;
             // 
-<<<<<<< HEAD
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Tomato;
-            this.panel1.Controls.Add(this.lbHome);
-            this.panel1.Location = new System.Drawing.Point(254, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1034, 160);
-            this.panel1.TabIndex = 1;
-            // 
-            // lbHome
-            // 
-            this.lbHome.AutoSize = true;
-            this.lbHome.Font = new System.Drawing.Font("Consolas", 49.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHome.Location = new System.Drawing.Point(319, 22);
-            this.lbHome.Name = "lbHome";
-            this.lbHome.Size = new System.Drawing.Size(456, 97);
-            this.lbHome.TabIndex = 0;
-            this.lbHome.Text = "Trang Chủ";
-            this.lbHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pnlMain
             // 
-            this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlMain.Location = new System.Drawing.Point(254, 160);
-=======
-            // pnlMain
-            // 
-            this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMain.AutoSize = true;
             this.pnlMain.Location = new System.Drawing.Point(189, 123);
             this.pnlMain.MaximumSize = new System.Drawing.Size(11111, 1111);
->>>>>>> 0dd71a584735590afb98c8b1f9b49589d80c1f27
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1211, 633);
             this.pnlMain.TabIndex = 3;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(189, 0);
