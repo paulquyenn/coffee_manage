@@ -74,5 +74,16 @@ namespace ProjectdotNET
             fbill.BringToFront();
             fbill.Show();
         }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            fCategoryADO fcategoryADO = new fCategoryADO();
+            fcategoryADO.TopLevel = false;
+
+            pnlMain.Controls.Add(fcategoryADO);
+
+            fcategoryADO.BringToFront();
+            fcategoryADO.Show();
+        }
     }
 }
