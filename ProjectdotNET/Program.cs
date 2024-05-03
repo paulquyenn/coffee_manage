@@ -16,7 +16,7 @@ namespace ProjectdotNET
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            /*Application.Run(new FormCategoryADO());*/
+            //Application.Run(new fCategoryADO());
             /*Application.Run(new FormCategoryLinQ());*/
             /*            Application.Run(new FormEmployeeADO());
                         Application.Run(new FormEmployeeLinQ());*/
