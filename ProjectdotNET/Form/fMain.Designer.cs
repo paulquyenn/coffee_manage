@@ -125,6 +125,7 @@
             this.btnTable.TabIndex = 5;
             this.btnTable.Text = "Bàn";
             this.btnTable.UseVisualStyleBackColor = true;
+            this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
             // 
             // btnEmployee
             // 

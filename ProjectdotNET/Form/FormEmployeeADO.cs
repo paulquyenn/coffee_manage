@@ -143,7 +143,7 @@ namespace ProjectdotNET
             if (MessageBox.Show("Bạn có muốn xóa không?", "Thông Báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 int id = int.Parse(tbEmployeeID.Text);
-                string sql = string.Format("delete from tblEmployee where EmployeeID={0}", id);
+                string sql = string.Format("delete from tblEMPLOYEE where EmployeeID={0}", id);
                 db.runQuery(sql);
                 LoadGridData();
             }

@@ -83,5 +83,10 @@ namespace ProjectdotNET
             fcategoryADO.BringToFront();
             fcategoryADO.Show();
         }
+
+        private void btnTable_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormTableADO());
+        }
     }
 }
