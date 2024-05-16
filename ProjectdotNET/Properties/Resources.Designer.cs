@@ -63,9 +63,29 @@ namespace ProjectdotNET.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _11zon_cropped {
+            get {
+                object obj = ResourceManager.GetObject("11zon_cropped", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coffee_shop_logo_branding_vector {
             get {
                 object obj = ResourceManager.GetObject("coffee-shop-logo-branding-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frr2jbdpSeWtvzVYnHRD_yllw6IP2g2y49X8N {
+            get {
+                object obj = ResourceManager.GetObject("Frr2jbdpSeWtvzVYnHRD_yllw6IP2g2y49X8N", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
