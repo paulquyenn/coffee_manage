@@ -21,9 +21,11 @@ namespace ProjectdotNET
             /*            Application.Run(new FormEmployeeADO());
                         Application.Run(new FormEmployeeLinQ());*/
             Application.Run(new fLogin());
-            //Application.Run(new Product_ADO());
-            //Application.Run(new fBill_ADO());
+            //Application.Run(new fProduct());
+            //Application.Run(new fBill());
             //Application.Run(new fBillinfo());
+            //Application.Run(new fOder());
+            //Application.Run(new fRevenue());
         }
     }
 }

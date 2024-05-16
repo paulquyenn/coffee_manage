@@ -1,6 +1,6 @@
 ﻿namespace ProjectdotNET
 {
-    partial class fBill_ADO
+    partial class fBill
     {
         /// <summary>
         /// Required designer variable.

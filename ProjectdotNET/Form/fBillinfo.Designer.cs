@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tbBillID = new System.Windows.Forms.TextBox();
+            this.cbProductID = new System.Windows.Forms.ComboBox();
+            this.tbQuantity = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -38,34 +41,60 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvBillinfo = new System.Windows.Forms.DataGridView();
-            this.cbProductID = new System.Windows.Forms.ComboBox();
-            this.tbQuantity = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.cbBillID = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBillinfo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbBillID);
             this.panel1.Controls.Add(this.cbProductID);
             this.panel1.Controls.Add(this.tbQuantity);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.tbBillID);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(366, 169);
             this.panel1.TabIndex = 31;
             // 
-            // tbBillID
+            // cbProductID
             // 
-            this.tbBillID.Enabled = false;
-            this.tbBillID.Location = new System.Drawing.Point(124, 10);
-            this.tbBillID.Name = "tbBillID";
-            this.tbBillID.Size = new System.Drawing.Size(232, 27);
-            this.tbBillID.TabIndex = 11;
+            this.cbProductID.Enabled = false;
+            this.cbProductID.FormattingEnabled = true;
+            this.cbProductID.Location = new System.Drawing.Point(124, 70);
+            this.cbProductID.Name = "cbProductID";
+            this.cbProductID.Size = new System.Drawing.Size(232, 28);
+            this.cbProductID.TabIndex = 44;
+            // 
+            // tbQuantity
+            // 
+            this.tbQuantity.Enabled = false;
+            this.tbQuantity.Location = new System.Drawing.Point(124, 126);
+            this.tbQuantity.Name = "tbQuantity";
+            this.tbQuantity.Size = new System.Drawing.Size(232, 27);
+            this.tbQuantity.TabIndex = 43;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(13, 129);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 20);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Số lượng";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 73);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 20);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "Sản phẩm";
             // 
             // label1
             // 
@@ -151,42 +180,13 @@
             this.dgvBillinfo.TabIndex = 24;
             this.dgvBillinfo.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBillinfo_CellEnter);
             // 
-            // cbProductID
+            // cbBillID
             // 
-            this.cbProductID.Enabled = false;
-            this.cbProductID.FormattingEnabled = true;
-            this.cbProductID.Location = new System.Drawing.Point(124, 70);
-            this.cbProductID.Name = "cbProductID";
-            this.cbProductID.Size = new System.Drawing.Size(232, 28);
-            this.cbProductID.TabIndex = 44;
-            // 
-            // tbQuantity
-            // 
-            this.tbQuantity.Enabled = false;
-            this.tbQuantity.Location = new System.Drawing.Point(124, 126);
-            this.tbQuantity.Name = "tbQuantity";
-            this.tbQuantity.Size = new System.Drawing.Size(232, 27);
-            this.tbQuantity.TabIndex = 43;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 129);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 20);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "Số lượng";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 73);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 20);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "Sản phẩm";
+            this.cbBillID.FormattingEnabled = true;
+            this.cbBillID.Location = new System.Drawing.Point(124, 10);
+            this.cbBillID.Name = "cbBillID";
+            this.cbBillID.Size = new System.Drawing.Size(232, 28);
+            this.cbBillID.TabIndex = 45;
             // 
             // fBillinfo
             // 
@@ -203,7 +203,7 @@
             this.Controls.Add(this.dgvBillinfo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fBillinfo";
             this.Text = "fBillinfo";
             this.Load += new System.EventHandler(this.fBillinfo_Load);
@@ -217,7 +217,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox tbBillID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnEdit;
@@ -230,5 +229,6 @@
         private System.Windows.Forms.TextBox tbQuantity;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbBillID;
     }
 }

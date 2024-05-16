@@ -40,6 +40,7 @@
             this.btnAccount = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnRevenue = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnTable);
             this.flowLayoutPanel1.Controls.Add(this.btnEmployee);
             this.flowLayoutPanel1.Controls.Add(this.btnAccount);
+            this.flowLayoutPanel1.Controls.Add(this.btnRevenue);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -174,6 +176,17 @@
             this.label1.Text = "Trang chủ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnRevenue
+            // 
+            this.btnRevenue.Location = new System.Drawing.Point(0, 612);
+            this.btnRevenue.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRevenue.Name = "btnRevenue";
+            this.btnRevenue.Size = new System.Drawing.Size(186, 70);
+            this.btnRevenue.TabIndex = 7;
+            this.btnRevenue.Text = "Thống kê";
+            this.btnRevenue.UseVisualStyleBackColor = true;
+            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -183,13 +196,14 @@
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
+            this.Load += new System.EventHandler(this.fMain_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -210,5 +224,6 @@
         private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnRevenue;
     }
 }

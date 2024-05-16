@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ProjectdotNET
 {
-    public partial class fProduct_ADO : Form
+    public partial class fProduct : Form
     {
-        public fProduct_ADO()
+        public fProduct()
         {
             InitializeComponent();
         }
 
-        DBServices db = new DBServices();
+        COFFEESTOREEntities myCoffeeStore = new COFFEESTOREEntities();
         bool AddNew = false;
 
         private void Product_ADO_Load(object sender, EventArgs e)
@@ -28,11 +28,14 @@ namespace ProjectdotNET
 
         private void LoadGridDataProduct()
         {
-            dgvProduct.DataSource = db.getData("SELECT * FROM tblPRODUCT");
+            var queryProduct = from item in myCoffeeStore.tblPRODUCT
+                               select item;
+            dgvProduct.DataSource = queryProduct.ToList();
         }
 
         private void LoadGridDataCategory()
         {
+            DBServices db = new DBServices();
             string sql = "SELECT * FROM tblCATEGORY";
             cbCategoryID.DisplayMember = "CategoryName";
             cbCategoryID.ValueMember = "CategoryID";
@@ -42,12 +45,15 @@ namespace ProjectdotNET
         private void dgvProduct_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             int i = e.RowIndex;
-            tbProductID.Text = dgvProduct.Rows[i].Cells["ProductID"].Value.ToString();
-            tbProductName.Text = dgvProduct.Rows[i].Cells["ProductName"].Value.ToString();
-            cbCategoryID.SelectedValue = dgvProduct.Rows[i].Cells["CategoryID"].Value.ToString();
-            tbPrice.Text = dgvProduct.Rows[i].Cells["Price"].Value.ToString();
-            tbUnit.Text = dgvProduct.Rows[i].Cells["Unit"].Value.ToString();
-            tbDescription.Text = dgvProduct.Rows[i].Cells["Description"].Value.ToString();
+            if(i >= 0)
+            {
+                tbProductID.Text = dgvProduct.Rows[i].Cells["ProductID"].Value.ToString();
+                tbProductName.Text = dgvProduct.Rows[i].Cells["ProductName"].Value.ToString();
+                cbCategoryID.SelectedValue = dgvProduct.Rows[i].Cells["CategoryID"].Value.ToString();
+                tbPrice.Text = dgvProduct.Rows[i].Cells["Price"].Value.ToString();
+                tbUnit.Text = dgvProduct.Rows[i].Cells["Unit"].Value.ToString();
+                tbDescription.Text = dgvProduct.Rows[i].Cells["Description"].Value.ToString();
+            }
         }
 
         private void setEnable(bool check)
@@ -81,28 +87,29 @@ namespace ProjectdotNET
         {
             if (AddNew)
             {
-                string ProductName = tbProductName.Text;
-                float Price = float.Parse(tbPrice.Text);
-                string CategoryID = cbCategoryID.SelectedValue.ToString();
-                string Unit = tbUnit.Text;
-                string Description = tbDescription.Text;
-                string sql = string.Format("INSERT INTO tblPRODUCT VALUES (N'{0}', {1}, {2}, N'{3}', N'{4}')",
-                    ProductName, CategoryID, Price, Unit, Description);
-                db.runQuery(sql);
+                tblPRODUCT product = new tblPRODUCT();
+                product.ProductName = tbProductName.Text;
+                product.CategoryID = int.Parse(cbCategoryID.SelectedValue.ToString());
+                product.Price = (Decimal)float.Parse(tbPrice.Text);
+                product.Unit = tbUnit.Text;
+                product.Description = tbDescription.Text;
+                myCoffeeStore.tblPRODUCT.Add(product);
+                myCoffeeStore.SaveChanges();
                 LoadGridDataProduct();
             }
             else
             {
-                string ProductID = tbProductID.Text;
-                string ProductName = tbProductName.Text;
-                float Price = float.Parse(tbPrice.Text);
-                string CategoryID = cbCategoryID.SelectedValue.ToString();
-                string Unit = tbUnit.Text;
-                string Description = tbDescription.Text;
-                string sql = string.Format("UPDATE tblPRODUCT SET ProductName = N'{0}', CategoryID = {1}, " +
-                    "Price = {2}, Unit = N'{3}', Description = N'{4}' WHERE ProductID = {5}", ProductName,
-                    CategoryID, Price, Unit, Description, ProductID);
-                db.runQuery(sql);
+                int ProductID = int.Parse(tbProductID.Text);
+                var queryProduct = from item in myCoffeeStore.tblPRODUCT
+                                   where item.ProductID == ProductID
+                                   select item;
+                tblPRODUCT product = queryProduct.First();
+                product.ProductName = tbProductName.Text;
+                product.CategoryID = int.Parse(cbCategoryID.SelectedValue.ToString());
+                product.Price = (Decimal)float.Parse(tbPrice.Text);
+                product.Unit = tbUnit.Text;
+                product.Description = tbDescription.Text;
+                myCoffeeStore.SaveChanges();
                 LoadGridDataProduct();
             }
             setEnable(false);
@@ -119,8 +126,11 @@ namespace ProjectdotNET
                 MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 int ProductID = int.Parse(tbProductID.Text);
-                string sql = string.Format("DELETE FROM tblPRODUCT WHERE ProductID = {0}", ProductID);
-                db.runQuery(sql);
+                var queryProduct = from item in myCoffeeStore.tblPRODUCT
+                                   where item.ProductID == ProductID
+                                   select item;
+                myCoffeeStore.tblPRODUCT.Remove(queryProduct.First());
+                myCoffeeStore.SaveChanges();
                 LoadGridDataProduct();
             }
         }

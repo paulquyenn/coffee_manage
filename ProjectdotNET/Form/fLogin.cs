@@ -54,5 +54,10 @@ namespace ProjectdotNET
         {
             Application.Exit();
         }
+
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+            this.MaximizeBox = false;
+        }
     }
 }

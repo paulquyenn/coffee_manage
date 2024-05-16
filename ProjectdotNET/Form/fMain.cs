@@ -42,7 +42,7 @@ namespace ProjectdotNET
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            fProduct_ADO fproduct_ADO = new fProduct_ADO();
+            fProduct fproduct_ADO = new fProduct();
             fproduct_ADO.TopLevel = false;
 
             pnlMain.Controls.Add(fproduct_ADO);
@@ -64,7 +64,7 @@ namespace ProjectdotNET
 
         private void btnBill_Click(object sender, EventArgs e)
         {
-            fBill_ADO fbill = new fBill_ADO();
+            fBill fbill = new fBill();
             fbill.TopLevel = false;
 
             pnlMain.Controls.Add(fbill);
@@ -84,9 +84,20 @@ namespace ProjectdotNET
             fcategoryADO.Show();
         }
 
-        private void btnTable_Click(object sender, EventArgs e)
+        private void fMain_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new FormTableADO());
+            this.MaximizeBox = false;
+        }
+
+        private void btnRevenue_Click(object sender, EventArgs e)
+        {
+            fRevenue frevenue = new fRevenue();
+            frevenue.TopLevel = false;
+
+            pnlMain.Controls.Add(frevenue);
+
+            frevenue.BringToFront();
+            frevenue.Show();
         }
     }
 }

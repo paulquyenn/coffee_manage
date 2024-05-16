@@ -17,17 +17,29 @@ namespace ProjectdotNET
             InitializeComponent();
         }
 
-        DBServices db = new DBServices();
+        COFFEESTOREEntities myCoffeeStore = new COFFEESTOREEntities();
         private bool AddNew = false;
 
         private void LoadGridDataBillinfo()
         {
-            dgvBillinfo.DataSource = db.getData("SELECT * FROM tblBILL_INFO");
+            var queryBillinfo = from item in myCoffeeStore.tblBILL_INFO
+                                select item;
+            dgvBillinfo.DataSource = queryBillinfo.ToList();
         }
+
+
+       private void LoadGridDataBill()
+       {
+            DBServices db = new DBServices();
+            string sql = "SELECT * FROM tblBILL";
+            cbBillID.ValueMember = "BillID";
+            cbBillID.DataSource = db.getData(sql);
+       }
 
         private void LoadGridDataProduct()
         {
-            string sql = "SELECT * FROM tblProduct";
+            DBServices db = new DBServices();
+            string sql = "SELECT * FROM tblPRODUCT";
             cbProductID.ValueMember = "ProductID";
             cbProductID.DisplayMember = "ProductName";
             cbProductID.DataSource = db.getData(sql);
@@ -36,6 +48,7 @@ namespace ProjectdotNET
         private void fBillinfo_Load(object sender, EventArgs e)
         {
             LoadGridDataBillinfo();
+            LoadGridDataBill();
             LoadGridDataProduct();
         }
 
@@ -44,7 +57,7 @@ namespace ProjectdotNET
             int i = e.RowIndex;
             if(i >= 0 )
             {
-                tbBillID.Text = dgvBillinfo.Rows[i].Cells["BillID"].Value.ToString();
+                cbBillID.SelectedValue = dgvBillinfo.Rows[i].Cells["BillID"].Value.ToString();
                 cbProductID.SelectedValue = dgvBillinfo.Rows[i].Cells["ProductID"].Value.ToString();
                 tbQuantity.Text = dgvBillinfo.Rows[i].Cells["Quantity"].Value.ToString();
             }
@@ -52,7 +65,7 @@ namespace ProjectdotNET
 
         private void setEnable(bool check)
         {
-            tbBillID.Enabled = check;
+            cbBillID.Enabled = check;
             cbProductID.Enabled = check;
             tbQuantity.Enabled = check;
             btnSave.Enabled = check;
@@ -73,20 +86,24 @@ namespace ProjectdotNET
         {
             if (AddNew)
             {
-                string BillID = tbBillID.Text;
-                string ProductID = cbProductID.SelectedValue.ToString();
-                string Quantity = tbQuantity.Text;
-                string sql = string.Format("INSERT INTO tblBILL_INFO VALUES ({0}, {1}, {2})", BillID, ProductID, Quantity);
-                db.runQuery(sql);
+                tblBILL_INFO Billinfo = new tblBILL_INFO();
+                Billinfo.BillID = int.Parse(cbBillID.SelectedValue.ToString());
+                Billinfo.ProductID = int.Parse(cbProductID.SelectedValue.ToString());
+                Billinfo.Quantity = int.Parse(tbQuantity.Text.ToString());
+                myCoffeeStore.tblBILL_INFO.Add(Billinfo);
+                myCoffeeStore.SaveChanges();
                 LoadGridDataBillinfo();
             }
             else
             {
-                string BillID = tbBillID.Text;
-                string ProductID = cbProductID.SelectedValue.ToString();
-                string Quantity = tbQuantity.Text;
-                string sql = string.Format("UPDATE tblBILL_INFO SET Quantity = {0} WHERE BillID = {1} AND ProductID = {2}", Quantity, BillID, ProductID);
-                db.runQuery(sql);
+                int BillID = int.Parse(cbBillID.SelectedValue.ToString());
+                int ProductID = int.Parse(cbProductID.SelectedValue.ToString());
+                var queryBillinfo = from item in myCoffeeStore.tblBILL_INFO
+                                    where item.BillID == BillID && item.ProductID == ProductID
+                                    select item;
+                tblBILL_INFO Billinfo = queryBillinfo.First();
+                Billinfo.Quantity = int.Parse(tbQuantity.Text);
+                myCoffeeStore.SaveChanges();
                 LoadGridDataBillinfo();
             }
             setEnable(false);
@@ -102,10 +119,13 @@ namespace ProjectdotNET
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không", "Thông báo",
                 MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                string BillID = tbBillID.Text;
-                string ProductID = cbProductID.SelectedValue.ToString();
-                string sql = string.Format("DELETE FROM tblBILL_INFO WHERE BillID = {0} AND ProductID = {1}", BillID, ProductID);
-                db.runQuery(sql);
+                int BillID = int.Parse(cbBillID.SelectedValue.ToString());
+                int ProductID = int.Parse(cbProductID.SelectedValue.ToString());
+                var queryBillinfo = from item in myCoffeeStore.tblBILL_INFO
+                                    where item.BillID == BillID && item.ProductID == ProductID
+                                    select item;
+                myCoffeeStore.tblBILL_INFO.Remove(queryBillinfo.First());
+                myCoffeeStore.SaveChanges();
                 LoadGridDataBillinfo();
             }
         }

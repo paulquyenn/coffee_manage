@@ -65,7 +65,7 @@
             this.dgvEmployeeADO.Name = "dgvEmployeeADO";
             this.dgvEmployeeADO.RowHeadersWidth = 51;
             this.dgvEmployeeADO.RowTemplate.Height = 24;
-            this.dgvEmployeeADO.Size = new System.Drawing.Size(802, 608);
+            this.dgvEmployeeADO.Size = new System.Drawing.Size(644, 574);
             this.dgvEmployeeADO.TabIndex = 0;
             this.dgvEmployeeADO.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployeeADO_CellEnter);
             // 
@@ -97,10 +97,10 @@
             this.panel1.Controls.Add(this.tbGender);
             this.panel1.Controls.Add(this.tbEmployeeName);
             this.panel1.Controls.Add(this.tbEmployeeID);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(366, 608);
+            this.panel1.Size = new System.Drawing.Size(369, 592);
             this.panel1.TabIndex = 1;
             // 
             // dtpBirthDate
@@ -114,7 +114,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(657, 83);
+            this.label9.Location = new System.Drawing.Point(12, 346);
             this.label9.Name = "label9";
             this.label9.TabIndex = 23;
             this.label9.Text = "Mô tả";
@@ -196,13 +196,13 @@
             // 
             this.rtbDescription.Location = new System.Drawing.Point(157, 343);
             this.rtbDescription.Name = "rtbDescription";
-            this.rtbDescription.Size = new System.Drawing.Size(198, 85);
+            this.rtbDescription.Size = new System.Drawing.Size(198, 61);
             this.rtbDescription.TabIndex = 14;
             this.rtbDescription.Text = "";
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(187, 546);
+            this.btnClose.Location = new System.Drawing.Point(190, 533);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 50);
             this.btnClose.TabIndex = 13;
@@ -212,7 +212,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(11, 546);
+            this.btnDelete.Location = new System.Drawing.Point(14, 533);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(130, 50);
             this.btnDelete.TabIndex = 12;
@@ -222,7 +222,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(187, 490);
+            this.btnCancel.Location = new System.Drawing.Point(190, 477);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(130, 50);
             this.btnCancel.TabIndex = 11;
@@ -232,7 +232,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(11, 490);
+            this.btnEdit.Location = new System.Drawing.Point(14, 477);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(130, 50);
             this.btnEdit.TabIndex = 10;
@@ -242,7 +242,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(187, 434);
+            this.btnSave.Location = new System.Drawing.Point(190, 421);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(130, 50);
             this.btnSave.TabIndex = 9;
@@ -252,7 +252,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(11, 434);
+            this.btnAdd.Location = new System.Drawing.Point(14, 421);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(130, 50);
             this.btnAdd.TabIndex = 8;
@@ -314,7 +314,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1192, 629);
+            this.ClientSize = new System.Drawing.Size(1034, 595);
             this.Controls.Add(this.dgvEmployeeADO);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
