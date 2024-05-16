@@ -71,7 +71,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dtpBirthDate);
             this.panel1.Controls.Add(this.label9);
@@ -116,7 +116,6 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(12, 346);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 20);
             this.label9.TabIndex = 23;
             this.label9.Text = "Mô tả";
             // 

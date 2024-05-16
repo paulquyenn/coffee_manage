@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,7 +38,12 @@ namespace ProjectdotNET
 
         bool Login(string userName, string passWord)
         {
-            return Account.Instance.Login(userName, passWord);
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] originalBytes = ASCIIEncoding.Default.GetBytes(passWord);
+            byte[] encodedBytes = md5.ComputeHash(originalBytes);
+            string hashedPassword = BitConverter.ToString(encodedBytes).Replace("-", "");
+
+            return Account.Instance.Login(userName, hashedPassword);
         }
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
