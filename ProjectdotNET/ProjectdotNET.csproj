@@ -97,10 +97,10 @@
     <Compile Include="Form\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTableADO.cs">
+    <Compile Include="Form\FormTableADO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTableADO.Designer.cs">
+    <Compile Include="Form\FormTableADO.Designer.cs">
       <DependentUpon>FormTableADO.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormEmployeeLinQ.cs">
@@ -174,7 +174,7 @@
     <EmbeddedResource Include="Form\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTableADO.resx">
+    <EmbeddedResource Include="Form\FormTableADO.resx">
       <DependentUpon>FormTableADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormEmployeeLinQ.resx">
