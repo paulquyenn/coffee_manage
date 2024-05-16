@@ -38,12 +38,7 @@ namespace ProjectdotNET
 
         bool Login(string userName, string passWord)
         {
-            MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] originalBytes = ASCIIEncoding.Default.GetBytes(passWord);
-            byte[] encodedBytes = md5.ComputeHash(originalBytes);
-            string hashedPassword = BitConverter.ToString(encodedBytes).Replace("-", "");
-
-            return Account.Instance.Login(userName, hashedPassword);
+            return Account.Instance.Login(userName, passWord);
         }
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
