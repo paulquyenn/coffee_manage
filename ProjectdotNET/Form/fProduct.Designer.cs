@@ -1,6 +1,6 @@
 ﻿namespace ProjectdotNET
 {
-    partial class fProduct_ADO
+    partial class fProduct
     {
         /// <summary>
         /// Required designer variable.

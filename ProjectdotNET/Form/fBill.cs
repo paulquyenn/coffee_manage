@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,23 +11,26 @@ using System.Windows.Forms;
 
 namespace ProjectdotNET
 {
-    public partial class fBill_ADO : Form
+    public partial class fBill : Form
     {
-        public fBill_ADO()
+        public fBill()
         {
             InitializeComponent();
         }
 
-        DBServices db = new DBServices();
+        COFFEESTOREEntities myCoffeeStore = new COFFEESTOREEntities();
         private bool AddNew = false;
 
         private void LoadGridDataBill()
         {
-            dgvBill.DataSource = db.getData("SELECT * FROM tblBILL");
+            var queryBill = from item in myCoffeeStore.tblBILL
+                            select item;
+            dgvBill.DataSource = queryBill.ToList();
         }
 
         private void LoadGridDataEmployeeID()
         {
+            DBServices db = new DBServices();
             string sql = "SELECT * FROM tblEMPLOYEE";
             cbEmployeeID.DisplayMember = "EmployeeName";
             cbEmployeeID.ValueMember = "EmployeeID";
@@ -35,6 +39,7 @@ namespace ProjectdotNET
 
         private void LoadGridDataTableID()
         {
+            DBServices db = new DBServices();
             string sql = "SELECT * FROM tblTABLE";
             cbTableID.ValueMember = "TableID";
             cbTableID.DataSource = db.getData(sql);
@@ -86,24 +91,27 @@ namespace ProjectdotNET
         {
             if (AddNew)
             {
-                string EmployeeID = cbEmployeeID.SelectedValue.ToString();
-                string OrderDate = dtOrderDate.Text;
-                string TableID = cbTableID.SelectedValue.ToString();
-                string Status = cbStatus.SelectedItem.ToString();
-                string sql = string.Format("INSERT INTO tblBILL VALUES ({0}, '{1}', {2}, N'{3}')", EmployeeID, OrderDate, TableID, Status);
-                db.runQuery(sql);
+                tblBILL bill = new tblBILL();
+                bill.EmployeeID = int.Parse(cbEmployeeID.SelectedValue.ToString());
+                bill.OrderDate = dtOrderDate.Value;
+                bill.TableID = int.Parse(cbTableID.SelectedValue.ToString());
+                bill.Status = cbStatus.Text;
+                myCoffeeStore.tblBILL.Add(bill);
+                myCoffeeStore.SaveChanges();
                 LoadGridDataBill();
             }
             else
             {
-                string BillID = tbBillID.Text;
-                string EmployeeID = cbEmployeeID.SelectedValue.ToString();
-                string OrderDate = dtOrderDate.Text;
-                string TableID = cbTableID.SelectedValue.ToString();
-                string Status = cbStatus.SelectedItem.ToString();
-                string sql = string.Format("UPDATE tblBILL SET EmployeeID = {0}, OrderDate = '{1}', TableID = {2}, " +
-                    "Status = N'{3}' WHERE BillID = {4}", EmployeeID, OrderDate, TableID, Status, BillID);
-                db.runQuery(sql);
+                int BillID = int.Parse(tbBillID.Text);
+                var queryBill = from item in myCoffeeStore.tblBILL
+                                where item.BillID == BillID
+                                select item;
+                tblBILL bill = queryBill.First();
+                bill.EmployeeID = int.Parse(cbEmployeeID.SelectedValue.ToString());
+                bill.OrderDate = dtOrderDate.Value;
+                bill.TableID = int.Parse(cbTableID.SelectedValue.ToString());
+                bill.Status = cbStatus.Text;
+                myCoffeeStore.SaveChanges();
                 LoadGridDataBill();
             }
             setEnable(false);
@@ -119,9 +127,20 @@ namespace ProjectdotNET
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không", "Thông báo",
                 MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                string BillID = tbBillID.Text;
-                string sql = string.Format("DELETE FROM tblBILL WHERE BillID = {0}", BillID);
-                db.runQuery(sql);
+                int BillID = int.Parse(tbBillID.Text);
+                var queryBillinfo = from item in myCoffeeStore.tblBILL_INFO
+                                    where item.BillID == BillID
+                                    select item;
+                foreach(tblBILL_INFO Billinfo in queryBillinfo)
+                {
+                    myCoffeeStore.tblBILL_INFO.Remove(Billinfo);
+                }
+
+                var queryBill = from item in myCoffeeStore.tblBILL
+                            where item.BillID == BillID
+                            select item;
+                myCoffeeStore.tblBILL.Remove(queryBill.First());
+                myCoffeeStore.SaveChanges();
                 LoadGridDataBill();
             }
         }

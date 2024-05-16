@@ -79,11 +79,11 @@
     <Compile Include="Form\fBillinfo.Designer.cs">
       <DependentUpon>fBillinfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fBill_ADO.cs">
+    <Compile Include="Form\fBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fBill_ADO.Designer.cs">
-      <DependentUpon>fBill_ADO.cs</DependentUpon>
+    <Compile Include="Form\fBill.Designer.cs">
+      <DependentUpon>fBill.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\fMain.cs">
       <SubType>Form</SubType>
@@ -127,17 +127,17 @@
     <Compile Include="Form\FormEmployeeADO.Designer.cs">
       <DependentUpon>FormEmployeeADO.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fProduct_ADO.cs">
+    <Compile Include="Form\fProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fProduct_ADO.Designer.cs">
-      <DependentUpon>fProduct_ADO.cs</DependentUpon>
+    <Compile Include="Form\fProduct.Designer.cs">
+      <DependentUpon>fProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product_LINQ.cs">
+    <Compile Include="Form\fRevenue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product_LINQ.Designer.cs">
-      <DependentUpon>Product_LINQ.cs</DependentUpon>
+    <Compile Include="Form\fRevenue.Designer.cs">
+      <DependentUpon>fRevenue.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -167,8 +167,8 @@
     <EmbeddedResource Include="Form\fBillinfo.resx">
       <DependentUpon>fBillinfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fBill_ADO.resx">
-      <DependentUpon>fBill_ADO.cs</DependentUpon>
+    <EmbeddedResource Include="Form\fBill.resx">
+      <DependentUpon>fBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
@@ -191,8 +191,11 @@
     <EmbeddedResource Include="Form\FormEmployeeADO.resx">
       <DependentUpon>FormEmployeeADO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fProduct_ADO.resx">
-      <DependentUpon>fProduct_ADO.cs</DependentUpon>
+    <EmbeddedResource Include="Form\fProduct.resx">
+      <DependentUpon>fProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fRevenue.resx">
+      <DependentUpon>fRevenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -242,6 +245,8 @@
       <DependentUpon>COFFEE.edmx</DependentUpon>
       <LastGenOutput>COFFEE.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\11zon_cropped.png" />
+    <None Include="Resources\Frr2jbdpSeWtvzVYnHRD_yllw6IP2g2y49X8N.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
