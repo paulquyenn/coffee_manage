@@ -99,5 +99,10 @@ namespace ProjectdotNET
             frevenue.BringToFront();
             frevenue.Show();
         }
+
+        private void btnTable_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

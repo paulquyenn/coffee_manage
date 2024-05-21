@@ -38,9 +38,9 @@
             this.btnTable = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnAccount = new System.Windows.Forms.Button();
+            this.btnRevenue = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnRevenue = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -150,6 +150,17 @@
             this.btnAccount.Text = "Tài Khoản";
             this.btnAccount.UseVisualStyleBackColor = true;
             // 
+            // btnRevenue
+            // 
+            this.btnRevenue.Location = new System.Drawing.Point(0, 612);
+            this.btnRevenue.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRevenue.Name = "btnRevenue";
+            this.btnRevenue.Size = new System.Drawing.Size(186, 70);
+            this.btnRevenue.TabIndex = 7;
+            this.btnRevenue.Text = "Thống kê";
+            this.btnRevenue.UseVisualStyleBackColor = true;
+            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
+            // 
             // pnlMain
             // 
             this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -175,17 +186,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Trang chủ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnRevenue
-            // 
-            this.btnRevenue.Location = new System.Drawing.Point(0, 612);
-            this.btnRevenue.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRevenue.Name = "btnRevenue";
-            this.btnRevenue.Size = new System.Drawing.Size(186, 70);
-            this.btnRevenue.TabIndex = 7;
-            this.btnRevenue.Text = "Thống kê";
-            this.btnRevenue.UseVisualStyleBackColor = true;
-            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
             // fMain
             // 
