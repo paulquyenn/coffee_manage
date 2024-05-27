@@ -63,9 +63,9 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(193, 512);
+            this.btnExit.Location = new System.Drawing.Point(215, 519);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(170, 50);
+            this.btnExit.Size = new System.Drawing.Size(105, 47);
             this.btnExit.TabIndex = 24;
             this.btnExit.Text = "Đóng";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -74,9 +74,9 @@
             // btnCancel
             // 
             this.btnCancel.Enabled = false;
-            this.btnCancel.Location = new System.Drawing.Point(193, 442);
+            this.btnCancel.Location = new System.Drawing.Point(215, 449);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(170, 50);
+            this.btnCancel.Size = new System.Drawing.Size(105, 47);
             this.btnCancel.TabIndex = 23;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -85,9 +85,9 @@
             // btnSave
             // 
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(193, 373);
+            this.btnSave.Location = new System.Drawing.Point(215, 380);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(170, 50);
+            this.btnSave.Size = new System.Drawing.Size(105, 47);
             this.btnSave.TabIndex = 22;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -95,9 +95,9 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(17, 442);
+            this.btnEdit.Location = new System.Drawing.Point(58, 449);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(170, 50);
+            this.btnEdit.Size = new System.Drawing.Size(105, 47);
             this.btnEdit.TabIndex = 21;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -105,9 +105,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(17, 512);
+            this.btnDelete.Location = new System.Drawing.Point(58, 519);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(170, 50);
+            this.btnDelete.Size = new System.Drawing.Size(105, 47);
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -115,9 +115,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(17, 373);
+            this.btnAdd.Location = new System.Drawing.Point(58, 380);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(170, 50);
+            this.btnAdd.Size = new System.Drawing.Size(105, 47);
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -250,7 +250,7 @@
             this.dgvProduct.TabIndex = 18;
             this.dgvProduct.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellEnter);
             // 
-            // fProduct_ADO
+            // fProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -267,7 +267,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "fProduct_ADO";
+            this.Name = "fProduct";
             this.Text = "Sản phẩm";
             this.Load += new System.EventHandler(this.Product_ADO_Load);
             this.panel1.ResumeLayout(false);

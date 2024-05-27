@@ -38,17 +38,12 @@ namespace ProjectdotNET
 
         bool Login(string userName, string passWord)
         {
-            MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] originalBytes = ASCIIEncoding.Default.GetBytes(passWord);
-            byte[] encodedBytes = md5.ComputeHash(originalBytes);
-            string hashedPassword = BitConverter.ToString(encodedBytes).Replace("-", "");
-
-            return Account.Instance.Login(userName, hashedPassword);
+            return Account.Instance.Login(userName, passWord);
         }
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo", MessageBoxButtons.OKCancel)
+            if (MessageBox.Show("Bạn có thật sự muốn thoát phần mềm?", "Thông báo", MessageBoxButtons.OKCancel)
                 != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;

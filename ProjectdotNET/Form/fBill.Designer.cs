@@ -218,9 +218,9 @@
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.Size = new System.Drawing.Size(131, 25);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Mã hóa đơn";
+            this.label1.Text = "Mã đơn hàng";
             // 
             // panel1
             // 
@@ -239,7 +239,7 @@
             this.panel1.Size = new System.Drawing.Size(366, 244);
             this.panel1.TabIndex = 23;
             // 
-            // fBill_ADO
+            // fBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,7 +256,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "fBill_ADO";
+            this.Name = "fBill";
             this.Text = "Hóa đơn";
             this.Load += new System.EventHandler(this.fBill_ADO_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
