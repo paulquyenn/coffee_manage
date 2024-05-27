@@ -166,10 +166,14 @@
             this.lbTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbTitle.Location = new System.Drawing.Point(0, 0);
+            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.Location = new System.Drawing.Point(189, 0);
+            this.lbTitle.MaximumSize = new System.Drawing.Size(11111, 1111);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(100, 23);
-            this.lbTitle.TabIndex = 0;
+            this.lbTitle.Size = new System.Drawing.Size(1041, 122);
+            this.lbTitle.TabIndex = 5;
+            this.lbTitle.Text = "Trang Chủ";
+            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fMain
             // 
