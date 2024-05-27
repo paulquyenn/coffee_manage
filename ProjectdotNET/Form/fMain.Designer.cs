@@ -37,7 +37,6 @@
             this.btnBill_Info = new System.Windows.Forms.Button();
             this.btnTable = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
-            this.btnAccount = new System.Windows.Forms.Button();
             this.btnRevenue = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             this.flowLayoutPanel1.Controls.Add(this.btnBill_Info);
             this.flowLayoutPanel1.Controls.Add(this.btnTable);
             this.flowLayoutPanel1.Controls.Add(this.btnEmployee);
-            this.flowLayoutPanel1.Controls.Add(this.btnAccount);
             this.flowLayoutPanel1.Controls.Add(this.btnRevenue);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -140,15 +138,16 @@
             this.btnEmployee.UseVisualStyleBackColor = true;
             this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
-            // btnAccount
+            // btnRevenue
             // 
-            this.btnAccount.Location = new System.Drawing.Point(0, 542);
-            this.btnAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(186, 70);
-            this.btnAccount.TabIndex = 7;
-            this.btnAccount.Text = "Tài Khoản";
-            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnRevenue.Location = new System.Drawing.Point(0, 542);
+            this.btnRevenue.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRevenue.Name = "btnRevenue";
+            this.btnRevenue.Size = new System.Drawing.Size(186, 70);
+            this.btnRevenue.TabIndex = 7;
+            this.btnRevenue.Text = "Thống kê";
+            this.btnRevenue.UseVisualStyleBackColor = true;
+            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
             // btnRevenue
             // 
@@ -221,7 +220,6 @@
         private System.Windows.Forms.Button btnBill_Info;
         private System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Button btnEmployee;
-        private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRevenue;
