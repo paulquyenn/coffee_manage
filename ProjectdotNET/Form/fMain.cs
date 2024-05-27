@@ -37,51 +37,32 @@ namespace ProjectdotNET
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
+            lbTitle.Text = btnEmployee.Text;
             OpenChildForm(new FormEmployeeADO());
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            fProduct fproduct_ADO = new fProduct();
-            fproduct_ADO.TopLevel = false;
-
-            pnlMain.Controls.Add(fproduct_ADO);
-
-            fproduct_ADO.BringToFront();
-            fproduct_ADO.Show();
+            lbTitle.Text = btnProduct.Text;
+            OpenChildForm(new fProduct());
         }
 
         private void btnBill_Info_Click(object sender, EventArgs e)
         {
-            fBillinfo fbillinfo = new fBillinfo();
-            fbillinfo.TopLevel = false;
-
-            pnlMain.Controls.Add(fbillinfo);
-
-            fbillinfo.BringToFront();
-            fbillinfo.Show();
+            lbTitle.Text = btnBill_Info.Text;
+            OpenChildForm(new fBillinfo());
         }
 
         private void btnBill_Click(object sender, EventArgs e)
         {
-            fBill fbill = new fBill();
-            fbill.TopLevel = false;
-
-            pnlMain.Controls.Add(fbill);
-
-            fbill.BringToFront();
-            fbill.Show();
+            lbTitle.Text = btnBill.Text;
+            OpenChildForm(new fBill());
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
-            fCategoryADO fcategoryADO = new fCategoryADO();
-            fcategoryADO.TopLevel = false;
-
-            pnlMain.Controls.Add(fcategoryADO);
-
-            fcategoryADO.BringToFront();
-            fcategoryADO.Show();
+            lbTitle.Text = btnCategory.Text;
+            OpenChildForm(new fCategoryADO());
         }
 
         private void fMain_Load(object sender, EventArgs e)
@@ -91,18 +72,15 @@ namespace ProjectdotNET
 
         private void btnRevenue_Click(object sender, EventArgs e)
         {
-            fRevenue frevenue = new fRevenue();
-            frevenue.TopLevel = false;
-
-            pnlMain.Controls.Add(frevenue);
-
-            frevenue.BringToFront();
-            frevenue.Show();
+            lbTitle.Text = btnRevenue.Text;
+            OpenChildForm(new fRevenue());
         }
 
         private void btnTable_Click(object sender, EventArgs e)
         {
-
+            lbTitle.Text = btnTable.Text;
+            OpenChildForm(new FormTableADO());
         }
+
     }
 }

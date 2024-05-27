@@ -183,7 +183,7 @@
             this.dgvBillinfo.RowHeadersWidth = 51;
             this.dgvBillinfo.RowTemplate.Height = 24;
             this.dgvBillinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBillinfo.Size = new System.Drawing.Size(594, 159);
+            this.dgvBillinfo.Size = new System.Drawing.Size(600, 159);
             this.dgvBillinfo.TabIndex = 1;
             // 
             // groupBox1
@@ -201,7 +201,7 @@
             this.groupBox2.Controls.Add(this.dgvBillinfo);
             this.groupBox2.Location = new System.Drawing.Point(410, 390);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(606, 193);
+            this.groupBox2.Size = new System.Drawing.Size(612, 193);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết đơn hàng";
