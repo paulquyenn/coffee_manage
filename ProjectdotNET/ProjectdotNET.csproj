@@ -73,6 +73,12 @@
     </Compile>
     <Compile Include="Class\DBServices.cs" />
     <Compile Include="Class\DataProvider.cs" />
+    <Compile Include="Form\fAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fAccount.Designer.cs">
+      <DependentUpon>fAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\fBillinfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     <Compile Include="tblTABLE.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\fAccount.resx">
+      <DependentUpon>fAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\fBillinfo.resx">
       <DependentUpon>fBillinfo.cs</DependentUpon>
     </EmbeddedResource>
