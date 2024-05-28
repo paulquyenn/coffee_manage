@@ -82,5 +82,10 @@ namespace ProjectdotNET
             OpenChildForm(new FormTableADO());
         }
 
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            lbTitle.Text = btnAccount.Text;
+            OpenChildForm(new fAccount());
+        }
     }
 }
