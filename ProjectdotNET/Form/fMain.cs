@@ -12,9 +12,24 @@ namespace ProjectdotNET
 {
     public partial class fMain : Form
     {
-        public fMain()
+        public fMain(int type, string name)
         {
             InitializeComponent();
+
+            lbAccount.Text = name;
+
+            if (type == 0 )
+            {
+                btnRevenue.Enabled = true;
+                btnEmployee.Enabled = true;
+                btnAccount.Enabled = true;
+            }
+            else
+            {
+                btnRevenue.Enabled = false;
+                btnEmployee.Enabled = false;
+                btnAccount.Enabled = false;
+            }
         }
 
         private Form currentChildForm;
@@ -87,5 +102,6 @@ namespace ProjectdotNET
             lbTitle.Text = btnAccount.Text;
             OpenChildForm(new fAccount());
         }
+
     }
 }

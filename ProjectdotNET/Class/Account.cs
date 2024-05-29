@@ -21,13 +21,17 @@ namespace ProjectdotNET
 
         DBServices db = new DBServices();
 
-        public bool Login(string userName, string passWord)
+        public int Login(string userName, string passWord)
         {
-            string query = "SELECT * FROM tblACCOUNT WHERE UserName = N'" + userName + "' AND Password = N'" + passWord + "' ";
+            string query0 = "SELECT * FROM tblACCOUNT WHERE UserName = '" + userName + "' AND Password = '" + passWord + "' AND TypeAccount = 0";
+            string query1 = "SELECT * FROM tblACCOUNT WHERE UserName = '" + userName + "' AND Password = '" + passWord + "' AND TypeAccount = 1";
 
-            DataTable result = db.getData(query);
+            DataTable result0 = db.getData(query0);
+            DataTable result1 = db.getData(query1);
 
-            return result.Rows.Count > 0;
+            if (result0.Rows.Count > 0) { return 0; }
+            else if(result1.Rows.Count > 0) { return 1; }
+            else return -1;
         }
     }
 }
