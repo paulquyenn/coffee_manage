@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
@@ -39,7 +38,9 @@
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnRevenue = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAccount = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,25 +53,15 @@
             this.flowLayoutPanel1.Controls.Add(this.btnBill);
             this.flowLayoutPanel1.Controls.Add(this.btnBill_Info);
             this.flowLayoutPanel1.Controls.Add(this.btnTable);
-            this.flowLayoutPanel1.Controls.Add(this.btnEmployee);
             this.flowLayoutPanel1.Controls.Add(this.btnRevenue);
+            this.flowLayoutPanel1.Controls.Add(this.btnEmployee);
+            this.flowLayoutPanel1.Controls.Add(this.btnAccount);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(187, 755);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(187, 723);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjectdotNET.Properties.Resources.coffee_shop_logo_branding_vector;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 122);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // btnProduct
             // 
@@ -90,7 +81,7 @@
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(186, 70);
             this.btnCategory.TabIndex = 2;
-            this.btnCategory.Text = "Loại sản phẩm";
+            this.btnCategory.Text = "Loại Sản phẩm";
             this.btnCategory.UseVisualStyleBackColor = true;
             this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
@@ -101,7 +92,7 @@
             this.btnBill.Name = "btnBill";
             this.btnBill.Size = new System.Drawing.Size(186, 70);
             this.btnBill.TabIndex = 3;
-            this.btnBill.Text = "Hóa Đơn";
+            this.btnBill.Text = "Đơn Hàng";
             this.btnBill.UseVisualStyleBackColor = true;
             this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
@@ -112,7 +103,7 @@
             this.btnBill_Info.Name = "btnBill_Info";
             this.btnBill_Info.Size = new System.Drawing.Size(186, 70);
             this.btnBill_Info.TabIndex = 4;
-            this.btnBill_Info.Text = "Chi Tiết Hóa Đơn";
+            this.btnBill_Info.Text = "Chi Tiết Đơn Hàng";
             this.btnBill_Info.UseVisualStyleBackColor = true;
             this.btnBill_Info.Click += new System.EventHandler(this.btnBill_Info_Click);
             // 
@@ -129,7 +120,7 @@
             // 
             // btnEmployee
             // 
-            this.btnEmployee.Location = new System.Drawing.Point(0, 472);
+            this.btnEmployee.Location = new System.Drawing.Point(0, 542);
             this.btnEmployee.Margin = new System.Windows.Forms.Padding(0);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(186, 70);
@@ -140,7 +131,7 @@
             // 
             // btnRevenue
             // 
-            this.btnRevenue.Location = new System.Drawing.Point(0, 542);
+            this.btnRevenue.Location = new System.Drawing.Point(0, 472);
             this.btnRevenue.Margin = new System.Windows.Forms.Padding(0);
             this.btnRevenue.Name = "btnRevenue";
             this.btnRevenue.Size = new System.Drawing.Size(186, 70);
@@ -158,29 +149,51 @@
             this.pnlMain.Location = new System.Drawing.Point(189, 123);
             this.pnlMain.MaximumSize = new System.Drawing.Size(11111, 1111);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1211, 633);
+            this.pnlMain.Size = new System.Drawing.Size(1041, 600);
             this.pnlMain.TabIndex = 3;
             // 
-            // label1
+            // lbTitle
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(189, 0);
-            this.label1.MaximumSize = new System.Drawing.Size(11111, 1111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1211, 122);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Trang chủ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.Location = new System.Drawing.Point(189, 0);
+            this.lbTitle.MaximumSize = new System.Drawing.Size(11111, 1111);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(1041, 122);
+            this.lbTitle.TabIndex = 5;
+            this.lbTitle.Text = "Trang Chủ";
+            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjectdotNET.Properties.Resources.coffee_shop_logo_branding_vector;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(186, 122);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.Location = new System.Drawing.Point(0, 612);
+            this.btnAccount.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(186, 70);
+            this.btnAccount.TabIndex = 8;
+            this.btnAccount.Text = "Tài khoản";
+            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1402, 755);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1232, 723);
+            this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -210,7 +223,8 @@
         private System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Button btnEmployee;
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Button btnRevenue;
+        private System.Windows.Forms.Button btnAccount;
     }
 }

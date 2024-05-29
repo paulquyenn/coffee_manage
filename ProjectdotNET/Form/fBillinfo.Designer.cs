@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbBillID = new System.Windows.Forms.ComboBox();
             this.cbProductID = new System.Windows.Forms.ComboBox();
             this.tbQuantity = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvBillinfo = new System.Windows.Forms.DataGridView();
-            this.cbBillID = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBillinfo)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(366, 169);
             this.panel1.TabIndex = 31;
+            // 
+            // cbBillID
+            // 
+            this.cbBillID.FormattingEnabled = true;
+            this.cbBillID.Location = new System.Drawing.Point(124, 10);
+            this.cbBillID.Name = "cbBillID";
+            this.cbBillID.Size = new System.Drawing.Size(232, 28);
+            this.cbBillID.TabIndex = 45;
             // 
             // cbProductID
             // 
@@ -102,9 +110,9 @@
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.Size = new System.Drawing.Size(131, 25);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Mã hóa đơn";
+            this.label1.Text = "Mã đơn hàng";
             // 
             // btnExit
             // 
@@ -179,14 +187,6 @@
             this.dgvBillinfo.Size = new System.Drawing.Size(627, 571);
             this.dgvBillinfo.TabIndex = 24;
             this.dgvBillinfo.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBillinfo_CellEnter);
-            // 
-            // cbBillID
-            // 
-            this.cbBillID.FormattingEnabled = true;
-            this.cbBillID.Location = new System.Drawing.Point(124, 10);
-            this.cbBillID.Name = "cbBillID";
-            this.cbBillID.Size = new System.Drawing.Size(232, 28);
-            this.cbBillID.TabIndex = 45;
             // 
             // fBillinfo
             // 
