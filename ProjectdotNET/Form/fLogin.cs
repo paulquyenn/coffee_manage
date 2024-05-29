@@ -18,14 +18,26 @@ namespace ProjectdotNET
             InitializeComponent();
         }
 
+        int Login(string userName, string passWord)
+        {
+            return Account.Instance.Login(userName, passWord);
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string userName = tbUserName.Text;
             string passWord = tbPassword.Text;
 
-            if (Login(userName, passWord))
+            if (Login(userName, passWord) == 0)
             {
-                fMain formMain = new fMain();
+                fMain formMain = new fMain(0, userName);
+                this.Hide();
+                formMain.ShowDialog();
+                this.Show();
+            }
+            else if(Login(userName, passWord) == 1)
+            {
+                fMain formMain = new fMain(1, userName);
                 this.Hide();
                 formMain.ShowDialog();
                 this.Show();
@@ -34,11 +46,6 @@ namespace ProjectdotNET
             {
                 MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
             }
-        }
-
-        bool Login(string userName, string passWord)
-        {
-            return Account.Instance.Login(userName, passWord);
         }
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
