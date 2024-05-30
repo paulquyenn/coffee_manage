@@ -107,7 +107,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(829, 120);
+            this.label10.Location = new System.Drawing.Point(819, 120);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 20);
             this.label10.TabIndex = 25;
@@ -204,10 +204,11 @@
             // 
             // cbShift
             // 
+            this.cbShift.AllowDrop = true;
             this.cbShift.FormattingEnabled = true;
             this.cbShift.Items.AddRange(new object[] {
             "Sáng",
-            "Trưa",
+            "Chiều",
             "Tối"});
             this.cbShift.Location = new System.Drawing.Point(422, 143);
             this.cbShift.Name = "cbShift";
@@ -227,9 +228,9 @@
             // 
             // tbDescription
             // 
-            this.tbDescription.Location = new System.Drawing.Point(833, 143);
+            this.tbDescription.Location = new System.Drawing.Point(823, 143);
             this.tbDescription.Name = "tbDescription";
-            this.tbDescription.Size = new System.Drawing.Size(150, 26);
+            this.tbDescription.Size = new System.Drawing.Size(160, 26);
             this.tbDescription.TabIndex = 12;
             // 
             // tbAddress

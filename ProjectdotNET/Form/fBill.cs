@@ -40,7 +40,7 @@ namespace ProjectdotNET
         private void LoadGridDataTableID()
         {
             DBServices db = new DBServices();
-            string sql = "SELECT * FROM tblTABLE";
+            string sql = "SELECT * FROM tblTABLE WHERE Status = N'Chưa'";
             cbTableID.ValueMember = "TableID";
             cbTableID.DataSource = db.getData(sql);
         }
@@ -128,17 +128,11 @@ namespace ProjectdotNET
                 MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 int BillID = int.Parse(tbBillID.Text);
-                var queryBillinfo = from item in myCoffeeStore.tblBILL_INFO
-                                    where item.BillID == BillID
-                                    select item;
-                foreach(tblBILL_INFO Billinfo in queryBillinfo)
-                {
-                    myCoffeeStore.tblBILL_INFO.Remove(Billinfo);
-                }
 
                 var queryBill = from item in myCoffeeStore.tblBILL
                             where item.BillID == BillID
                             select item;
+
                 myCoffeeStore.tblBILL.Remove(queryBill.First());
                 myCoffeeStore.SaveChanges();
                 LoadGridDataBill();

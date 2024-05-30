@@ -14,6 +14,7 @@ namespace ProjectdotNET
     {
         COFFEESTOREEntities myCoffee = new COFFEESTOREEntities();
         private bool AddNew = false;
+
         public fEmployee()
         {
             InitializeComponent();
