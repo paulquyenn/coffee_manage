@@ -73,6 +73,12 @@
     </Compile>
     <Compile Include="Class\DBServices.cs" />
     <Compile Include="Class\DataProvider.cs" />
+    <Compile Include="Form\fEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fEmployee.Designer.cs">
+      <DependentUpon>fEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\fAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,12 +115,6 @@
     <Compile Include="Form\FormTableADO.Designer.cs">
       <DependentUpon>FormTableADO.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormEmployeeLinQ.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FormEmployeeLinQ.Designer.cs">
-      <DependentUpon>FormEmployeeLinQ.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\fCategoryADO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,12 +126,6 @@
     </Compile>
     <Compile Include="Form\FormCategoryLinQ.Designer.cs">
       <DependentUpon>FormCategoryLinQ.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\FormEmployeeADO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FormEmployeeADO.Designer.cs">
-      <DependentUpon>FormEmployeeADO.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\fProduct.cs">
       <SubType>Form</SubType>
@@ -147,6 +141,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>COFFEE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>COFFEE.tt</DependentUpon>
+    </Compile>
     <Compile Include="tblACCOUNT.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
@@ -168,6 +168,9 @@
     <Compile Include="tblTABLE.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\fEmployee.resx">
+      <DependentUpon>fEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\fAccount.resx">
       <DependentUpon>fAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,17 +189,11 @@
     <EmbeddedResource Include="Form\FormTableADO.resx">
       <DependentUpon>FormTableADO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormEmployeeLinQ.resx">
-      <DependentUpon>FormEmployeeLinQ.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\fCategoryADO.resx">
       <DependentUpon>fCategoryADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCategoryLinQ.resx">
       <DependentUpon>FormCategoryLinQ.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormEmployeeADO.resx">
-      <DependentUpon>FormEmployeeADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\fProduct.resx">
       <DependentUpon>fProduct.cs</DependentUpon>

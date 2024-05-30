@@ -53,7 +53,7 @@ namespace ProjectdotNET
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             lbTitle.Text = btnEmployee.Text;
-            OpenChildForm(new FormEmployeeADO());
+            OpenChildForm(new fEmployee());
         }
 
         private void btnProduct_Click(object sender, EventArgs e)

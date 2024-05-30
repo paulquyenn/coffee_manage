@@ -27,6 +27,7 @@ namespace ProjectdotNET
         public string Phone { get; set; }
         public string Address { get; set; }
         public string Position { get; set; }
+        public string Shift { get; set; }
         public Nullable<decimal> Salary { get; set; }
         public string Description { get; set; }
     

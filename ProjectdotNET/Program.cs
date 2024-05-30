@@ -23,6 +23,7 @@ namespace ProjectdotNET
             //Application.Run(new fBillinfo());
             //Application.Run(new fOrder());
             //Application.Run(new fRevenue());
+            //Application.Run(new fEmployee());
         }
     }
 }
