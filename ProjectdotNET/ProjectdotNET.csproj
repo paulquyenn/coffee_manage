@@ -115,12 +115,6 @@
     <Compile Include="Form\FormTableADO.Designer.cs">
       <DependentUpon>FormTableADO.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormEmployeeLinQ.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FormEmployeeLinQ.Designer.cs">
-      <DependentUpon>FormEmployeeLinQ.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\fCategoryADO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormTableADO.resx">
       <DependentUpon>FormTableADO.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormEmployeeLinQ.resx">
-      <DependentUpon>FormEmployeeLinQ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\fCategoryADO.resx">
       <DependentUpon>fCategoryADO.cs</DependentUpon>
