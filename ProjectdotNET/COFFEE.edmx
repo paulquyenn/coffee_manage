@@ -251,7 +251,7 @@
           <Property Name="Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="Address" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Position" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Shift" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Shift" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Salary" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="tblBILL" Relationship="Self.FK__tblBILL__Employe__4316F928" FromRole="tblEMPLOYEE" ToRole="tblBILL" />

@@ -97,6 +97,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COFFEESTOREDataBill.xsd</DependentUpon>
     </Compile>
+    <Compile Include="COFFEESTOREDataSet1.cs">
+      <DependentUpon>COFFEESTOREDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="COFFEESTOREDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -168,10 +171,10 @@
     <Compile Include="Form\fRevenue.Designer.cs">
       <DependentUpon>fRevenue.cs</DependentUpon>
     </Compile>
-    <Compile Include="fReportBill.cs">
+    <Compile Include="Form\fReportBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fReportBill.Designer.cs">
+    <Compile Include="Form\fReportBill.Designer.cs">
       <DependentUpon>fReportBill.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -237,7 +240,7 @@
     <EmbeddedResource Include="Form\fRevenue.resx">
       <DependentUpon>fRevenue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fReportBill.resx">
+    <EmbeddedResource Include="Form\fReportBill.resx">
       <DependentUpon>fReportBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
