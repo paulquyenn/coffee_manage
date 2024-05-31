@@ -16,14 +16,13 @@ namespace ProjectdotNET
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new fCategoryADO());
             Application.Run(new fLogin());
-            //Application.Run(new fProduct());
             //Application.Run(new fBill());
             //Application.Run(new fBillinfo());
             //Application.Run(new fOrder());
             //Application.Run(new fRevenue());
             //Application.Run(new fEmployee());
+            //Application.Run(new fReportBill());
         }
     }
 }

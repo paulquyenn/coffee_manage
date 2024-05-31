@@ -61,6 +61,7 @@
             // 
             // cbBillID
             // 
+            this.cbBillID.Enabled = false;
             this.cbBillID.FormattingEnabled = true;
             this.cbBillID.Location = new System.Drawing.Point(124, 10);
             this.cbBillID.Name = "cbBillID";
@@ -110,7 +111,7 @@
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 25);
+            this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Mã đơn hàng";
             // 

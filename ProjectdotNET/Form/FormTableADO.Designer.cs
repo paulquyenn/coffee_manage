@@ -112,7 +112,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(509, 141);
+            this.btnDelete.Location = new System.Drawing.Point(348, 141);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(140, 70);
             this.btnDelete.TabIndex = 5;
@@ -122,7 +122,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(342, 141);
+            this.btnEdit.Location = new System.Drawing.Point(183, 141);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(140, 70);
             this.btnEdit.TabIndex = 4;
@@ -132,7 +132,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(176, 141);
+            this.btnSave.Location = new System.Drawing.Point(512, 141);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(140, 70);
             this.btnSave.TabIndex = 3;

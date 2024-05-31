@@ -46,22 +46,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtOrderDate
             // 
+            this.dtOrderDate.Enabled = false;
             this.dtOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtOrderDate.Location = new System.Drawing.Point(124, 103);
+            this.dtOrderDate.Location = new System.Drawing.Point(133, 106);
             this.dtOrderDate.Name = "dtOrderDate";
-            this.dtOrderDate.Size = new System.Drawing.Size(232, 27);
+            this.dtOrderDate.Size = new System.Drawing.Size(301, 27);
             this.dtOrderDate.TabIndex = 22;
             this.dtOrderDate.Value = new System.DateTime(2024, 4, 4, 0, 0, 0, 0);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(211, 413);
+            this.btnExit.Location = new System.Drawing.Point(262, 453);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(105, 47);
             this.btnExit.TabIndex = 21;
@@ -71,7 +73,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(57, 347);
+            this.btnEdit.Location = new System.Drawing.Point(108, 387);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(105, 47);
             this.btnEdit.TabIndex = 20;
@@ -82,7 +84,7 @@
             // btnCancel
             // 
             this.btnCancel.Enabled = false;
-            this.btnCancel.Location = new System.Drawing.Point(211, 347);
+            this.btnCancel.Location = new System.Drawing.Point(262, 387);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(105, 47);
             this.btnCancel.TabIndex = 19;
@@ -93,7 +95,7 @@
             // btnSave
             // 
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(211, 284);
+            this.btnSave.Location = new System.Drawing.Point(262, 324);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(105, 47);
             this.btnSave.TabIndex = 18;
@@ -103,7 +105,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(57, 413);
+            this.btnDelete.Location = new System.Drawing.Point(108, 453);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(105, 47);
             this.btnDelete.TabIndex = 17;
@@ -113,7 +115,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(57, 284);
+            this.btnAdd.Location = new System.Drawing.Point(108, 324);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(105, 47);
             this.btnAdd.TabIndex = 16;
@@ -124,12 +126,12 @@
             // dgvBill
             // 
             this.dgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBill.Location = new System.Drawing.Point(390, 12);
+            this.dgvBill.Location = new System.Drawing.Point(466, 12);
             this.dgvBill.Name = "dgvBill";
             this.dgvBill.RowHeadersWidth = 51;
             this.dgvBill.RowTemplate.Height = 24;
             this.dgvBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBill.Size = new System.Drawing.Size(632, 571);
+            this.dgvBill.Size = new System.Drawing.Size(556, 571);
             this.dgvBill.TabIndex = 15;
             this.dgvBill.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBill_CellEnter);
             // 
@@ -141,41 +143,41 @@
             this.cbStatus.Items.AddRange(new object[] {
             "Chưa thanh toán",
             "Đã thanh toán"});
-            this.cbStatus.Location = new System.Drawing.Point(124, 199);
+            this.cbStatus.Location = new System.Drawing.Point(133, 202);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(232, 28);
+            this.cbStatus.Size = new System.Drawing.Size(301, 28);
             this.cbStatus.TabIndex = 14;
             // 
             // cbTableID
             // 
             this.cbTableID.Enabled = false;
             this.cbTableID.FormattingEnabled = true;
-            this.cbTableID.Location = new System.Drawing.Point(124, 152);
+            this.cbTableID.Location = new System.Drawing.Point(133, 155);
             this.cbTableID.Name = "cbTableID";
-            this.cbTableID.Size = new System.Drawing.Size(232, 28);
+            this.cbTableID.Size = new System.Drawing.Size(301, 28);
             this.cbTableID.TabIndex = 13;
             // 
             // cbEmployeeID
             // 
             this.cbEmployeeID.Enabled = false;
             this.cbEmployeeID.FormattingEnabled = true;
-            this.cbEmployeeID.Location = new System.Drawing.Point(124, 59);
+            this.cbEmployeeID.Location = new System.Drawing.Point(133, 62);
             this.cbEmployeeID.Name = "cbEmployeeID";
-            this.cbEmployeeID.Size = new System.Drawing.Size(232, 28);
+            this.cbEmployeeID.Size = new System.Drawing.Size(301, 28);
             this.cbEmployeeID.TabIndex = 12;
             // 
             // tbBillID
             // 
             this.tbBillID.Enabled = false;
-            this.tbBillID.Location = new System.Drawing.Point(124, 10);
+            this.tbBillID.Location = new System.Drawing.Point(133, 13);
             this.tbBillID.Name = "tbBillID";
-            this.tbBillID.Size = new System.Drawing.Size(232, 27);
+            this.tbBillID.Size = new System.Drawing.Size(301, 27);
             this.tbBillID.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 202);
+            this.label5.Location = new System.Drawing.Point(22, 205);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 20);
@@ -185,7 +187,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 155);
+            this.label4.Location = new System.Drawing.Point(22, 158);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 20);
@@ -195,7 +197,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 108);
+            this.label3.Location = new System.Drawing.Point(22, 111);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 20);
@@ -205,7 +207,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 62);
+            this.label2.Location = new System.Drawing.Point(22, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
@@ -215,10 +217,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(22, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 25);
+            this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Mã đơn hàng";
             // 
@@ -236,8 +238,18 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(7, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(366, 244);
+            this.panel1.Size = new System.Drawing.Size(453, 244);
             this.panel1.TabIndex = 23;
+            // 
+            // btnPay
+            // 
+            this.btnPay.Location = new System.Drawing.Point(184, 521);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(105, 47);
+            this.btnPay.TabIndex = 24;
+            this.btnPay.Text = "Thanh Toán";
+            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // fBill
             // 
@@ -245,6 +257,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1034, 595);
+            this.Controls.Add(this.btnPay);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEdit);
@@ -286,5 +299,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnPay;
     }
 }

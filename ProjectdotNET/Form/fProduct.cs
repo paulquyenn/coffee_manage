@@ -29,7 +29,15 @@ namespace ProjectdotNET
         private void LoadGridDataProduct()
         {
             var queryProduct = from item in myCoffeeStore.tblPRODUCT
-                               select item;
+                               select new
+                               {
+                                   ProductID = item.ProductID,
+                                   ProductName = item.ProductName,
+                                   CategoryID = item.CategoryID,
+                                   Price = item.Price,
+                                   Unit = item.Unit,
+                                   Description = item.Description
+                               };
             dgvProduct.DataSource = queryProduct.ToList();
         }
 

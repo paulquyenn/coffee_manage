@@ -39,9 +39,28 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -73,6 +92,16 @@
     </Compile>
     <Compile Include="Class\DBServices.cs" />
     <Compile Include="Class\DataProvider.cs" />
+    <Compile Include="COFFEESTOREDataBill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COFFEESTOREDataBill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="COFFEESTOREDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COFFEESTOREDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form\fEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +168,12 @@
     <Compile Include="Form\fRevenue.Designer.cs">
       <DependentUpon>fRevenue.cs</DependentUpon>
     </Compile>
+    <Compile Include="fReportBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fReportBill.Designer.cs">
+      <DependentUpon>fReportBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
@@ -147,6 +182,7 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="tblACCOUNT.cs">
       <DependentUpon>COFFEE.tt</DependentUpon>
     </Compile>
@@ -201,11 +237,15 @@
     <EmbeddedResource Include="Form\fRevenue.resx">
       <DependentUpon>fRevenue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fReportBill.resx">
+      <DependentUpon>fReportBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportBill.rdlc" />
     <EntityDeploy Include="COFFEE.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>COFFEE.Designer.cs</LastGenOutput>
@@ -213,7 +253,30 @@
     <None Include="COFFEE.edmx.diagram">
       <DependentUpon>COFFEE.edmx</DependentUpon>
     </None>
+    <None Include="COFFEESTOREDataBill.xsc">
+      <DependentUpon>COFFEESTOREDataBill.xsd</DependentUpon>
+    </None>
+    <None Include="COFFEESTOREDataBill.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COFFEESTOREDataBill.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COFFEESTOREDataBill.xss">
+      <DependentUpon>COFFEESTOREDataBill.xsd</DependentUpon>
+    </None>
+    <None Include="COFFEESTOREDataSet1.xsc">
+      <DependentUpon>COFFEESTOREDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="COFFEESTOREDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COFFEESTOREDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COFFEESTOREDataSet1.xss">
+      <DependentUpon>COFFEESTOREDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\tblBILL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -248,6 +311,19 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>COFFEE.edmx</DependentUpon>
       <LastGenOutput>COFFEE.cs</LastGenOutput>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\11zon_cropped.png" />
     <None Include="Resources\Frr2jbdpSeWtvzVYnHRD_yllw6IP2g2y49X8N.jpg" />
