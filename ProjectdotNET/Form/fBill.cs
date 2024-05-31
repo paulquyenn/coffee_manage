@@ -24,7 +24,14 @@ namespace ProjectdotNET
         private void LoadGridDataBill()
         {
             var queryBill = from item in myCoffeeStore.tblBILL
-                            select item;
+                            select new
+                            {
+                                BillID = item.BillID,
+                                EmployeeID = item.EmployeeID,
+                                OrderDate = item.OrderDate,
+                                TableID = item.TableID,
+                                Status = item.Status
+                            };
             dgvBill.DataSource = queryBill.ToList();
         }
 
@@ -60,8 +67,8 @@ namespace ProjectdotNET
                 tbBillID.Text = dgvBill.Rows[i].Cells["BillID"].Value.ToString();
                 cbEmployeeID.SelectedValue = dgvBill.Rows[i].Cells["EmployeeID"].Value.ToString();
                 dtOrderDate.Text = dgvBill.Rows[i].Cells["OrderDate"].Value.ToString();
-                cbTableID.SelectedValue = dgvBill.Rows[i].Cells["TableID"].Value.ToString();
-                cbStatus.SelectedItem = dgvBill.Rows[i].Cells["Status"].Value.ToString();
+                cbTableID.Text = dgvBill.Rows[i].Cells["TableID"].Value.ToString();
+                cbStatus.Text = dgvBill.Rows[i].Cells["Status"].Value.ToString();
             }
         }
 
@@ -71,7 +78,7 @@ namespace ProjectdotNET
             cbEmployeeID.Enabled = check;
             dtOrderDate.Enabled = check;
             cbTableID.Enabled = check;
-            cbStatus.Enabled = check;
+            //cbStatus.Enabled = check;
             btnSave.Enabled = check;
             btnCancel.Enabled = check;
             btnAdd.Enabled = !check;
@@ -85,6 +92,7 @@ namespace ProjectdotNET
             tbBillID.Clear();
             AddNew = true;
             setEnable(true);
+            cbStatus.SelectedIndex = 0;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -109,7 +117,7 @@ namespace ProjectdotNET
                 tblBILL bill = queryBill.First();
                 bill.EmployeeID = int.Parse(cbEmployeeID.SelectedValue.ToString());
                 bill.OrderDate = dtOrderDate.Value;
-                bill.TableID = int.Parse(cbTableID.SelectedValue.ToString());
+                bill.TableID = int.Parse(cbTableID.Text);
                 bill.Status = cbStatus.Text;
                 myCoffeeStore.SaveChanges();
                 LoadGridDataBill();
@@ -148,6 +156,29 @@ namespace ProjectdotNET
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            int BillID = int.Parse(tbBillID.Text);
+            var queryBill = from item in myCoffeeStore.tblBILL
+                            where item.BillID == BillID
+                            select item;
+            if (queryBill.First().Status == "Đã thanh toán")
+            {
+                MessageBox.Show("Đơn hàng đã thanh toán", "Thông báo");
+                return;
+            }
+
+            fReportBill freportbill = new fReportBill(tbBillID.Text);
+            freportbill.ShowDialog();
+
+            
+            tblBILL bill = queryBill.First();
+            cbStatus.SelectedIndex = 1;
+            bill.Status = cbStatus.Text;
+            myCoffeeStore.SaveChanges();
+            LoadGridDataBill();
         }
     }
 }
