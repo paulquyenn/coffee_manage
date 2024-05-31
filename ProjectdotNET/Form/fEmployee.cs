@@ -43,7 +43,19 @@ namespace ProjectdotNET
         private void LoadGridData()
         {
             var query = from item in myCoffee.tblEMPLOYEE
-                        select item;
+                        select new
+                        {
+                            EmployeeID = item.EmployeeID,
+                            EmployeeName = item.EmployeeName,
+                            Gender = item.Gender,
+                            BirthDate = item.BirthDate,
+                            Phone = item.Phone,
+                            Address = item.Address,
+                            Position = item.Position,
+                            Shift = item.Shift,
+                            Salary = item.Salary,
+                            Description = item.Description,
+                        };
             dgvEmployee.DataSource = query.ToList();
         }
 
