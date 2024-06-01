@@ -20,19 +20,19 @@ namespace ProjectdotNET {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("COFFEESTOREDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("COFFEESTOREDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class COFFEESTOREDataSet1 : global::System.Data.DataSet {
+    public partial class COFFEESTOREDataSet : global::System.Data.DataSet {
         
         private Report_BillDataTable tableReport_Bill;
         
-        private Report_Total_MoneyDataTable tableReport_Total_Money;
+        private Report_BillInfoDataTable tableReport_BillInfo;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public COFFEESTOREDataSet1() {
+        public COFFEESTOREDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -43,7 +43,7 @@ namespace ProjectdotNET {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected COFFEESTOREDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected COFFEESTOREDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -59,8 +59,8 @@ namespace ProjectdotNET {
                 if ((ds.Tables["Report_Bill"] != null)) {
                     base.Tables.Add(new Report_BillDataTable(ds.Tables["Report_Bill"]));
                 }
-                if ((ds.Tables["Report_Total_Money"] != null)) {
-                    base.Tables.Add(new Report_Total_MoneyDataTable(ds.Tables["Report_Total_Money"]));
+                if ((ds.Tables["Report_BillInfo"] != null)) {
+                    base.Tables.Add(new Report_BillInfoDataTable(ds.Tables["Report_BillInfo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,9 +94,9 @@ namespace ProjectdotNET {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Report_Total_MoneyDataTable Report_Total_Money {
+        public Report_BillInfoDataTable Report_BillInfo {
             get {
-                return this.tableReport_Total_Money;
+                return this.tableReport_BillInfo;
             }
         }
         
@@ -142,7 +142,7 @@ namespace ProjectdotNET {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            COFFEESTOREDataSet1 cln = ((COFFEESTOREDataSet1)(base.Clone()));
+            COFFEESTOREDataSet cln = ((COFFEESTOREDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -170,8 +170,8 @@ namespace ProjectdotNET {
                 if ((ds.Tables["Report_Bill"] != null)) {
                     base.Tables.Add(new Report_BillDataTable(ds.Tables["Report_Bill"]));
                 }
-                if ((ds.Tables["Report_Total_Money"] != null)) {
-                    base.Tables.Add(new Report_Total_MoneyDataTable(ds.Tables["Report_Total_Money"]));
+                if ((ds.Tables["Report_BillInfo"] != null)) {
+                    base.Tables.Add(new Report_BillInfoDataTable(ds.Tables["Report_BillInfo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -212,10 +212,10 @@ namespace ProjectdotNET {
                     this.tableReport_Bill.InitVars();
                 }
             }
-            this.tableReport_Total_Money = ((Report_Total_MoneyDataTable)(base.Tables["Report_Total_Money"]));
+            this.tableReport_BillInfo = ((Report_BillInfoDataTable)(base.Tables["Report_BillInfo"]));
             if ((initTable == true)) {
-                if ((this.tableReport_Total_Money != null)) {
-                    this.tableReport_Total_Money.InitVars();
+                if ((this.tableReport_BillInfo != null)) {
+                    this.tableReport_BillInfo.InitVars();
                 }
             }
         }
@@ -223,15 +223,15 @@ namespace ProjectdotNET {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "COFFEESTOREDataSet1";
+            this.DataSetName = "COFFEESTOREDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/COFFEESTOREDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/COFFEESTOREDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableReport_Bill = new Report_BillDataTable();
             base.Tables.Add(this.tableReport_Bill);
-            this.tableReport_Total_Money = new Report_Total_MoneyDataTable();
-            base.Tables.Add(this.tableReport_Total_Money);
+            this.tableReport_BillInfo = new Report_BillInfoDataTable();
+            base.Tables.Add(this.tableReport_BillInfo);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -242,7 +242,7 @@ namespace ProjectdotNET {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeReport_Total_Money() {
+        private bool ShouldSerializeReport_BillInfo() {
             return false;
         }
         
@@ -257,7 +257,7 @@ namespace ProjectdotNET {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            COFFEESTOREDataSet1 ds = new COFFEESTOREDataSet1();
+            COFFEESTOREDataSet ds = new COFFEESTOREDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -305,7 +305,7 @@ namespace ProjectdotNET {
         public delegate void Report_BillRowChangeEventHandler(object sender, Report_BillRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void Report_Total_MoneyRowChangeEventHandler(object sender, Report_Total_MoneyRowChangeEvent e);
+        public delegate void Report_BillInfoRowChangeEventHandler(object sender, Report_BillInfoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -322,15 +322,7 @@ namespace ProjectdotNET {
             
             private global::System.Data.DataColumn columnStatus;
             
-            private global::System.Data.DataColumn columnProductName;
-            
-            private global::System.Data.DataColumn columnQuantity;
-            
-            private global::System.Data.DataColumn columnUnit;
-            
-            private global::System.Data.DataColumn columnPrice;
-            
-            private global::System.Data.DataColumn columnTotal;
+            private global::System.Data.DataColumn columnTotalMoney;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -399,41 +391,9 @@ namespace ProjectdotNET {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ProductNameColumn {
+            public global::System.Data.DataColumn TotalMoneyColumn {
                 get {
-                    return this.columnProductName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn QuantityColumn {
-                get {
-                    return this.columnQuantity;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn UnitColumn {
-                get {
-                    return this.columnUnit;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PriceColumn {
-                get {
-                    return this.columnPrice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TotalColumn {
-                get {
-                    return this.columnTotal;
+                    return this.columnTotalMoney;
                 }
             }
             
@@ -474,18 +434,14 @@ namespace ProjectdotNET {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Report_BillRow AddReport_BillRow(string EmployeeName, System.DateTime OrderDate, string Status, string ProductName, int Quantity, string Unit, decimal Price, decimal Total) {
+            public Report_BillRow AddReport_BillRow(string EmployeeName, System.DateTime OrderDate, string Status, decimal TotalMoney) {
                 Report_BillRow rowReport_BillRow = ((Report_BillRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         EmployeeName,
                         OrderDate,
                         Status,
-                        ProductName,
-                        Quantity,
-                        Unit,
-                        Price,
-                        Total};
+                        TotalMoney};
                 rowReport_BillRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReport_BillRow);
                 return rowReport_BillRow;
@@ -519,11 +475,7 @@ namespace ProjectdotNET {
                 this.columnEmployeeName = base.Columns["EmployeeName"];
                 this.columnOrderDate = base.Columns["OrderDate"];
                 this.columnStatus = base.Columns["Status"];
-                this.columnProductName = base.Columns["ProductName"];
-                this.columnQuantity = base.Columns["Quantity"];
-                this.columnUnit = base.Columns["Unit"];
-                this.columnPrice = base.Columns["Price"];
-                this.columnTotal = base.Columns["Total"];
+                this.columnTotalMoney = base.Columns["TotalMoney"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -537,16 +489,8 @@ namespace ProjectdotNET {
                 base.Columns.Add(this.columnOrderDate);
                 this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatus);
-                this.columnProductName = new global::System.Data.DataColumn("ProductName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProductName);
-                this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQuantity);
-                this.columnUnit = new global::System.Data.DataColumn("Unit", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUnit);
-                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrice);
-                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal);
+                this.columnTotalMoney = new global::System.Data.DataColumn("TotalMoney", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalMoney);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBillID}, true));
                 this.columnBillID.AutoIncrement = true;
@@ -556,9 +500,7 @@ namespace ProjectdotNET {
                 this.columnEmployeeName.AllowDBNull = false;
                 this.columnEmployeeName.MaxLength = 30;
                 this.columnStatus.MaxLength = 20;
-                this.columnProductName.MaxLength = 30;
-                this.columnUnit.MaxLength = 20;
-                this.columnTotal.ReadOnly = true;
+                this.columnTotalMoney.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -626,7 +568,7 @@ namespace ProjectdotNET {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                COFFEESTOREDataSet1 ds = new COFFEESTOREDataSet1();
+                COFFEESTOREDataSet ds = new COFFEESTOREDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -690,14 +632,22 @@ namespace ProjectdotNET {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Report_Total_MoneyDataTable : global::System.Data.TypedTableBase<Report_Total_MoneyRow> {
+        public partial class Report_BillInfoDataTable : global::System.Data.TypedTableBase<Report_BillInfoRow> {
             
-            private global::System.Data.DataColumn columnTotalMoney;
+            private global::System.Data.DataColumn columnProductName;
+            
+            private global::System.Data.DataColumn columnQuantity;
+            
+            private global::System.Data.DataColumn columnUnit;
+            
+            private global::System.Data.DataColumn columnPrice;
+            
+            private global::System.Data.DataColumn columnTotal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Report_Total_MoneyDataTable() {
-                this.TableName = "Report_Total_Money";
+            public Report_BillInfoDataTable() {
+                this.TableName = "Report_BillInfo";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -705,7 +655,7 @@ namespace ProjectdotNET {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Report_Total_MoneyDataTable(global::System.Data.DataTable table) {
+            internal Report_BillInfoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -722,16 +672,48 @@ namespace ProjectdotNET {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected Report_Total_MoneyDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Report_BillInfoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TotalMoneyColumn {
+            public global::System.Data.DataColumn ProductNameColumn {
                 get {
-                    return this.columnTotalMoney;
+                    return this.columnProductName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn QuantityColumn {
+                get {
+                    return this.columnQuantity;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UnitColumn {
+                get {
+                    return this.columnUnit;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PriceColumn {
+                get {
+                    return this.columnPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TotalColumn {
+                get {
+                    return this.columnTotal;
                 }
             }
             
@@ -746,45 +728,49 @@ namespace ProjectdotNET {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Report_Total_MoneyRow this[int index] {
+            public Report_BillInfoRow this[int index] {
                 get {
-                    return ((Report_Total_MoneyRow)(this.Rows[index]));
+                    return ((Report_BillInfoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Report_Total_MoneyRowChangeEventHandler Report_Total_MoneyRowChanging;
+            public event Report_BillInfoRowChangeEventHandler Report_BillInfoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Report_Total_MoneyRowChangeEventHandler Report_Total_MoneyRowChanged;
+            public event Report_BillInfoRowChangeEventHandler Report_BillInfoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Report_Total_MoneyRowChangeEventHandler Report_Total_MoneyRowDeleting;
+            public event Report_BillInfoRowChangeEventHandler Report_BillInfoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Report_Total_MoneyRowChangeEventHandler Report_Total_MoneyRowDeleted;
+            public event Report_BillInfoRowChangeEventHandler Report_BillInfoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddReport_Total_MoneyRow(Report_Total_MoneyRow row) {
+            public void AddReport_BillInfoRow(Report_BillInfoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Report_Total_MoneyRow AddReport_Total_MoneyRow(decimal TotalMoney) {
-                Report_Total_MoneyRow rowReport_Total_MoneyRow = ((Report_Total_MoneyRow)(this.NewRow()));
+            public Report_BillInfoRow AddReport_BillInfoRow(string ProductName, int Quantity, string Unit, decimal Price, decimal Total) {
+                Report_BillInfoRow rowReport_BillInfoRow = ((Report_BillInfoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        TotalMoney};
-                rowReport_Total_MoneyRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowReport_Total_MoneyRow);
-                return rowReport_Total_MoneyRow;
+                        ProductName,
+                        Quantity,
+                        Unit,
+                        Price,
+                        Total};
+                rowReport_BillInfoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowReport_BillInfoRow);
+                return rowReport_BillInfoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Report_Total_MoneyDataTable cln = ((Report_Total_MoneyDataTable)(base.Clone()));
+                Report_BillInfoDataTable cln = ((Report_BillInfoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -792,47 +778,61 @@ namespace ProjectdotNET {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Report_Total_MoneyDataTable();
+                return new Report_BillInfoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnTotalMoney = base.Columns["TotalMoney"];
+                this.columnProductName = base.Columns["ProductName"];
+                this.columnQuantity = base.Columns["Quantity"];
+                this.columnUnit = base.Columns["Unit"];
+                this.columnPrice = base.Columns["Price"];
+                this.columnTotal = base.Columns["Total"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnTotalMoney = new global::System.Data.DataColumn("TotalMoney", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotalMoney);
-                this.columnTotalMoney.ReadOnly = true;
+                this.columnProductName = new global::System.Data.DataColumn("ProductName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProductName);
+                this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQuantity);
+                this.columnUnit = new global::System.Data.DataColumn("Unit", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUnit);
+                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrice);
+                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal);
+                this.columnProductName.MaxLength = 30;
+                this.columnUnit.MaxLength = 20;
+                this.columnTotal.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Report_Total_MoneyRow NewReport_Total_MoneyRow() {
-                return ((Report_Total_MoneyRow)(this.NewRow()));
+            public Report_BillInfoRow NewReport_BillInfoRow() {
+                return ((Report_BillInfoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Report_Total_MoneyRow(builder);
+                return new Report_BillInfoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Report_Total_MoneyRow);
+                return typeof(Report_BillInfoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Report_Total_MoneyRowChanged != null)) {
-                    this.Report_Total_MoneyRowChanged(this, new Report_Total_MoneyRowChangeEvent(((Report_Total_MoneyRow)(e.Row)), e.Action));
+                if ((this.Report_BillInfoRowChanged != null)) {
+                    this.Report_BillInfoRowChanged(this, new Report_BillInfoRowChangeEvent(((Report_BillInfoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -840,8 +840,8 @@ namespace ProjectdotNET {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Report_Total_MoneyRowChanging != null)) {
-                    this.Report_Total_MoneyRowChanging(this, new Report_Total_MoneyRowChangeEvent(((Report_Total_MoneyRow)(e.Row)), e.Action));
+                if ((this.Report_BillInfoRowChanging != null)) {
+                    this.Report_BillInfoRowChanging(this, new Report_BillInfoRowChangeEvent(((Report_BillInfoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -849,8 +849,8 @@ namespace ProjectdotNET {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Report_Total_MoneyRowDeleted != null)) {
-                    this.Report_Total_MoneyRowDeleted(this, new Report_Total_MoneyRowChangeEvent(((Report_Total_MoneyRow)(e.Row)), e.Action));
+                if ((this.Report_BillInfoRowDeleted != null)) {
+                    this.Report_BillInfoRowDeleted(this, new Report_BillInfoRowChangeEvent(((Report_BillInfoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -858,14 +858,14 @@ namespace ProjectdotNET {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Report_Total_MoneyRowDeleting != null)) {
-                    this.Report_Total_MoneyRowDeleting(this, new Report_Total_MoneyRowChangeEvent(((Report_Total_MoneyRow)(e.Row)), e.Action));
+                if ((this.Report_BillInfoRowDeleting != null)) {
+                    this.Report_BillInfoRowDeleting(this, new Report_BillInfoRowChangeEvent(((Report_BillInfoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveReport_Total_MoneyRow(Report_Total_MoneyRow row) {
+            public void RemoveReport_BillInfoRow(Report_BillInfoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -874,7 +874,7 @@ namespace ProjectdotNET {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                COFFEESTOREDataSet1 ds = new COFFEESTOREDataSet1();
+                COFFEESTOREDataSet ds = new COFFEESTOREDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -892,7 +892,7 @@ namespace ProjectdotNET {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Report_Total_MoneyDataTable";
+                attribute2.FixedValue = "Report_BillInfoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1003,81 +1003,17 @@ namespace ProjectdotNET {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string ProductName {
+            public decimal TotalMoney {
                 get {
                     try {
-                        return ((string)(this[this.tableReport_Bill.ProductNameColumn]));
+                        return ((decimal)(this[this.tableReport_Bill.TotalMoneyColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ProductName\' in table \'Report_Bill\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalMoney\' in table \'Report_Bill\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableReport_Bill.ProductNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Quantity {
-                get {
-                    try {
-                        return ((int)(this[this.tableReport_Bill.QuantityColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Quantity\' in table \'Report_Bill\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableReport_Bill.QuantityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Unit {
-                get {
-                    try {
-                        return ((string)(this[this.tableReport_Bill.UnitColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Unit\' in table \'Report_Bill\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableReport_Bill.UnitColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Price {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableReport_Bill.PriceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'Report_Bill\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableReport_Bill.PriceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Total {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableReport_Bill.TotalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'Report_Bill\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableReport_Bill.TotalColumn] = value;
+                    this[this.tableReport_Bill.TotalMoneyColumn] = value;
                 }
             }
             
@@ -1107,105 +1043,169 @@ namespace ProjectdotNET {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsProductNameNull() {
-                return this.IsNull(this.tableReport_Bill.ProductNameColumn);
+            public bool IsTotalMoneyNull() {
+                return this.IsNull(this.tableReport_Bill.TotalMoneyColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetProductNameNull() {
-                this[this.tableReport_Bill.ProductNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsQuantityNull() {
-                return this.IsNull(this.tableReport_Bill.QuantityColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetQuantityNull() {
-                this[this.tableReport_Bill.QuantityColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsUnitNull() {
-                return this.IsNull(this.tableReport_Bill.UnitColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetUnitNull() {
-                this[this.tableReport_Bill.UnitColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPriceNull() {
-                return this.IsNull(this.tableReport_Bill.PriceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPriceNull() {
-                this[this.tableReport_Bill.PriceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTotalNull() {
-                return this.IsNull(this.tableReport_Bill.TotalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTotalNull() {
-                this[this.tableReport_Bill.TotalColumn] = global::System.Convert.DBNull;
+            public void SetTotalMoneyNull() {
+                this[this.tableReport_Bill.TotalMoneyColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Report_Total_MoneyRow : global::System.Data.DataRow {
+        public partial class Report_BillInfoRow : global::System.Data.DataRow {
             
-            private Report_Total_MoneyDataTable tableReport_Total_Money;
+            private Report_BillInfoDataTable tableReport_BillInfo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Report_Total_MoneyRow(global::System.Data.DataRowBuilder rb) : 
+            internal Report_BillInfoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableReport_Total_Money = ((Report_Total_MoneyDataTable)(this.Table));
+                this.tableReport_BillInfo = ((Report_BillInfoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal TotalMoney {
+            public string ProductName {
                 get {
                     try {
-                        return ((decimal)(this[this.tableReport_Total_Money.TotalMoneyColumn]));
+                        return ((string)(this[this.tableReport_BillInfo.ProductNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalMoney\' in table \'Report_Total_Money\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProductName\' in table \'Report_BillInfo\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableReport_Total_Money.TotalMoneyColumn] = value;
+                    this[this.tableReport_BillInfo.ProductNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTotalMoneyNull() {
-                return this.IsNull(this.tableReport_Total_Money.TotalMoneyColumn);
+            public int Quantity {
+                get {
+                    try {
+                        return ((int)(this[this.tableReport_BillInfo.QuantityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Quantity\' in table \'Report_BillInfo\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReport_BillInfo.QuantityColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTotalMoneyNull() {
-                this[this.tableReport_Total_Money.TotalMoneyColumn] = global::System.Convert.DBNull;
+            public string Unit {
+                get {
+                    try {
+                        return ((string)(this[this.tableReport_BillInfo.UnitColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Unit\' in table \'Report_BillInfo\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReport_BillInfo.UnitColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Price {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableReport_BillInfo.PriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'Report_BillInfo\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReport_BillInfo.PriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Total {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableReport_BillInfo.TotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'Report_BillInfo\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReport_BillInfo.TotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsProductNameNull() {
+                return this.IsNull(this.tableReport_BillInfo.ProductNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetProductNameNull() {
+                this[this.tableReport_BillInfo.ProductNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsQuantityNull() {
+                return this.IsNull(this.tableReport_BillInfo.QuantityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetQuantityNull() {
+                this[this.tableReport_BillInfo.QuantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsUnitNull() {
+                return this.IsNull(this.tableReport_BillInfo.UnitColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetUnitNull() {
+                this[this.tableReport_BillInfo.UnitColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPriceNull() {
+                return this.IsNull(this.tableReport_BillInfo.PriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPriceNull() {
+                this[this.tableReport_BillInfo.PriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTotalNull() {
+                return this.IsNull(this.tableReport_BillInfo.TotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTotalNull() {
+                this[this.tableReport_BillInfo.TotalColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1247,22 +1247,22 @@ namespace ProjectdotNET {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class Report_Total_MoneyRowChangeEvent : global::System.EventArgs {
+        public class Report_BillInfoRowChangeEvent : global::System.EventArgs {
             
-            private Report_Total_MoneyRow eventRow;
+            private Report_BillInfoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Report_Total_MoneyRowChangeEvent(Report_Total_MoneyRow row, global::System.Data.DataRowAction action) {
+            public Report_BillInfoRowChangeEvent(Report_BillInfoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Report_Total_MoneyRow Row {
+            public Report_BillInfoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1278,7 +1278,7 @@ namespace ProjectdotNET {
         }
     }
 }
-namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
+namespace ProjectdotNET.COFFEESTOREDataSetTableAdapters {
     
     
     /// <summary>
@@ -1406,11 +1406,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("EmployeeName", "EmployeeName");
             tableMapping.ColumnMappings.Add("OrderDate", "OrderDate");
             tableMapping.ColumnMappings.Add("Status", "Status");
-            tableMapping.ColumnMappings.Add("ProductName", "ProductName");
-            tableMapping.ColumnMappings.Add("Quantity", "Quantity");
-            tableMapping.ColumnMappings.Add("Unit", "Unit");
-            tableMapping.ColumnMappings.Add("Price", "Price");
-            tableMapping.ColumnMappings.Add("Total", "Total");
+            tableMapping.ColumnMappings.Add("TotalMoney", "TotalMoney");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1437,7 +1433,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(COFFEESTOREDataSet1.Report_BillDataTable dataTable, global::System.Nullable<int> _BillID) {
+        public virtual int Fill(COFFEESTOREDataSet.Report_BillDataTable dataTable, global::System.Nullable<int> _BillID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((_BillID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(_BillID.Value));
@@ -1456,7 +1452,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual COFFEESTOREDataSet1.Report_BillDataTable GetData(global::System.Nullable<int> _BillID) {
+        public virtual COFFEESTOREDataSet.Report_BillDataTable GetData(global::System.Nullable<int> _BillID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((_BillID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(_BillID.Value));
@@ -1464,7 +1460,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            COFFEESTOREDataSet1.Report_BillDataTable dataTable = new COFFEESTOREDataSet1.Report_BillDataTable();
+            COFFEESTOREDataSet.Report_BillDataTable dataTable = new COFFEESTOREDataSet.Report_BillDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1479,7 +1475,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Report_Total_MoneyTableAdapter : global::System.ComponentModel.Component {
+    public partial class Report_BillInfoTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1493,7 +1489,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Report_Total_MoneyTableAdapter() {
+        public Report_BillInfoTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1590,8 +1586,12 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Report_Total_Money";
-            tableMapping.ColumnMappings.Add("TotalMoney", "TotalMoney");
+            tableMapping.DataSetTable = "Report_BillInfo";
+            tableMapping.ColumnMappings.Add("ProductName", "ProductName");
+            tableMapping.ColumnMappings.Add("Quantity", "Quantity");
+            tableMapping.ColumnMappings.Add("Unit", "Unit");
+            tableMapping.ColumnMappings.Add("Price", "Price");
+            tableMapping.ColumnMappings.Add("Total", "Total");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1608,7 +1608,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.Report_Total_Money";
+            this._commandCollection[0].CommandText = "dbo.Report_BillInfo";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@_BillID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1618,7 +1618,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(COFFEESTOREDataSet1.Report_Total_MoneyDataTable dataTable, global::System.Nullable<int> _BillID) {
+        public virtual int Fill(COFFEESTOREDataSet.Report_BillInfoDataTable dataTable, global::System.Nullable<int> _BillID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((_BillID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(_BillID.Value));
@@ -1637,7 +1637,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual COFFEESTOREDataSet1.Report_Total_MoneyDataTable GetData(global::System.Nullable<int> _BillID) {
+        public virtual COFFEESTOREDataSet.Report_BillInfoDataTable GetData(global::System.Nullable<int> _BillID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((_BillID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(_BillID.Value));
@@ -1645,7 +1645,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            COFFEESTOREDataSet1.Report_Total_MoneyDataTable dataTable = new COFFEESTOREDataSet1.Report_Total_MoneyDataTable();
+            COFFEESTOREDataSet.Report_BillInfoDataTable dataTable = new COFFEESTOREDataSet.Report_BillInfoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1719,7 +1719,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(COFFEESTOREDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(COFFEESTOREDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1729,7 +1729,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(COFFEESTOREDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(COFFEESTOREDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1739,7 +1739,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(COFFEESTOREDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(COFFEESTOREDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1773,7 +1773,7 @@ namespace ProjectdotNET.COFFEESTOREDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(COFFEESTOREDataSet1 dataSet) {
+        public virtual int UpdateAll(COFFEESTOREDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

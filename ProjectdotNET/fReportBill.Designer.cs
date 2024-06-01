@@ -31,71 +31,49 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fReportBill));
             this.reportBillBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cOFFEESTOREDataBillBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cOFFEESTOREDataBill = new ProjectdotNET.COFFEESTOREDataBill();
+            this.cOFFEESTOREDataSet = new ProjectdotNET.COFFEESTOREDataSet();
             this.reportBillInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Report_BillBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cOFFEESTOREDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rpvBill = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.cOFFEESTOREDataSet1 = new ProjectdotNET.COFFEESTOREDataSet1();
-            this.cOFFEESTOREDataSet1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.report_BillTableAdapter = new ProjectdotNET.COFFEESTOREDataBillTableAdapters.Report_BillTableAdapter();
-            this.report_BillInfoTableAdapter = new ProjectdotNET.COFFEESTOREDataBillTableAdapters.Report_BillInfoTableAdapter();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.report_BillTableAdapter = new ProjectdotNET.COFFEESTOREDataSetTableAdapters.Report_BillTableAdapter();
+            this.report_BillInfoTableAdapter = new ProjectdotNET.COFFEESTOREDataSetTableAdapters.Report_BillInfoTableAdapter();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnCompleted = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.reportBillBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataBillBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataBill)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportBillInfoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Report_BillBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataSet1BindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // reportBillBindingSource
             // 
             this.reportBillBindingSource.DataMember = "Report_Bill";
-            this.reportBillBindingSource.DataSource = this.cOFFEESTOREDataBillBindingSource;
+            this.reportBillBindingSource.DataSource = this.cOFFEESTOREDataSet;
             // 
-            // cOFFEESTOREDataBillBindingSource
+            // cOFFEESTOREDataSet
             // 
-            this.cOFFEESTOREDataBillBindingSource.DataSource = this.cOFFEESTOREDataBill;
-            this.cOFFEESTOREDataBillBindingSource.Position = 0;
-            // 
-            // cOFFEESTOREDataBill
-            // 
-            this.cOFFEESTOREDataBill.DataSetName = "COFFEESTOREDataBill";
-            this.cOFFEESTOREDataBill.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cOFFEESTOREDataSet.DataSetName = "COFFEESTOREDataSet";
+            this.cOFFEESTOREDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportBillInfoBindingSource
             // 
             this.reportBillInfoBindingSource.DataMember = "Report_BillInfo";
-            this.reportBillInfoBindingSource.DataSource = this.cOFFEESTOREDataBillBindingSource;
+            this.reportBillInfoBindingSource.DataSource = this.cOFFEESTOREDataSet;
             // 
-            // rpvBill
+            // reportViewer1
             // 
-            reportDataSource1.Name = "DataBill";
+            reportDataSource1.Name = "DataSetBill";
             reportDataSource1.Value = this.reportBillBindingSource;
-            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Name = "DataSetBillinfo";
             reportDataSource2.Value = this.reportBillInfoBindingSource;
-            this.rpvBill.LocalReport.DataSources.Add(reportDataSource1);
-            this.rpvBill.LocalReport.DataSources.Add(reportDataSource2);
-            this.rpvBill.LocalReport.ReportEmbeddedResource = "ProjectdotNET.ReportBill.rdlc";
-            this.rpvBill.Location = new System.Drawing.Point(12, 12);
-            this.rpvBill.Name = "rpvBill";
-            this.rpvBill.ServerReport.BearerToken = null;
-            this.rpvBill.Size = new System.Drawing.Size(543, 620);
-            this.rpvBill.TabIndex = 0;
-            // 
-            // cOFFEESTOREDataSet1
-            // 
-            this.cOFFEESTOREDataSet1.DataSetName = "COFFEESTOREDataSet1";
-            this.cOFFEESTOREDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cOFFEESTOREDataSet1BindingSource1
-            // 
-            this.cOFFEESTOREDataSet1BindingSource1.DataSource = this.cOFFEESTOREDataSet1;
-            this.cOFFEESTOREDataSet1BindingSource1.Position = 0;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjectdotNET.ReportBillinfo.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(525, 560);
+            this.reportViewer1.TabIndex = 0;
             // 
             // report_BillTableAdapter
             // 
@@ -105,43 +83,57 @@
             // 
             this.report_BillInfoTableAdapter.ClearBeforeFill = true;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(71, 578);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(112, 42);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnCompleted
+            // 
+            this.btnCompleted.Location = new System.Drawing.Point(362, 578);
+            this.btnCompleted.Name = "btnCompleted";
+            this.btnCompleted.Size = new System.Drawing.Size(112, 42);
+            this.btnCompleted.TabIndex = 1;
+            this.btnCompleted.Text = "Hoàn tất";
+            this.btnCompleted.UseVisualStyleBackColor = true;
+            this.btnCompleted.Click += new System.EventHandler(this.btnCompleted_Click);
+            // 
             // fReportBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(567, 644);
-            this.Controls.Add(this.rpvBill);
+            this.ClientSize = new System.Drawing.Size(549, 632);
+            this.Controls.Add(this.btnCompleted);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fReportBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fReportBill";
+            this.Text = "Hóa Đơn";
             this.Load += new System.EventHandler(this.fReportBill_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reportBillBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataBillBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataBill)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportBillInfoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Report_BillBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEESTOREDataSet1BindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer rpvBill;
-        private System.Windows.Forms.BindingSource cOFFEESTOREDataSet1BindingSource;
-        private System.Windows.Forms.BindingSource Report_BillBindingSource;
-        private System.Windows.Forms.BindingSource cOFFEESTOREDataBillBindingSource;
-        private COFFEESTOREDataBill cOFFEESTOREDataBill;
-        private System.Windows.Forms.BindingSource cOFFEESTOREDataSet1BindingSource1;
-        private COFFEESTOREDataSet1 cOFFEESTOREDataSet1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource reportBillBindingSource;
+        private COFFEESTOREDataSet cOFFEESTOREDataSet;
         private System.Windows.Forms.BindingSource reportBillInfoBindingSource;
-        private COFFEESTOREDataBillTableAdapters.Report_BillTableAdapter report_BillTableAdapter;
-        private COFFEESTOREDataBillTableAdapters.Report_BillInfoTableAdapter report_BillInfoTableAdapter;
+        private COFFEESTOREDataSetTableAdapters.Report_BillTableAdapter report_BillTableAdapter;
+        private COFFEESTOREDataSetTableAdapters.Report_BillInfoTableAdapter report_BillInfoTableAdapter;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnCompleted;
     }
 }

@@ -78,13 +78,13 @@ namespace ProjectdotNET
             cbEmployeeID.Enabled = check;
             dtOrderDate.Enabled = check;
             cbTableID.Enabled = check;
-            //cbStatus.Enabled = check;
             btnSave.Enabled = check;
             btnCancel.Enabled = check;
             btnAdd.Enabled = !check;
             btnDelete.Enabled = !check;
             btnEdit.Enabled = !check;
             btnExit.Enabled = !check;
+            btnPay.Enabled = !check;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -106,7 +106,6 @@ namespace ProjectdotNET
                 bill.Status = cbStatus.Text;
                 myCoffeeStore.tblBILL.Add(bill);
                 myCoffeeStore.SaveChanges();
-                LoadGridDataBill();
             }
             else
             {
@@ -120,9 +119,10 @@ namespace ProjectdotNET
                 bill.TableID = int.Parse(cbTableID.Text);
                 bill.Status = cbStatus.Text;
                 myCoffeeStore.SaveChanges();
-                LoadGridDataBill();
             }
             setEnable(false);
+            LoadGridDataBill();
+            LoadGridDataTableID();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -172,12 +172,6 @@ namespace ProjectdotNET
 
             fReportBill freportbill = new fReportBill(tbBillID.Text);
             freportbill.ShowDialog();
-
-            
-            tblBILL bill = queryBill.First();
-            cbStatus.SelectedIndex = 1;
-            bill.Status = cbStatus.Text;
-            myCoffeeStore.SaveChanges();
             LoadGridDataBill();
         }
     }

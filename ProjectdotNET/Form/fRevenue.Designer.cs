@@ -243,7 +243,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fRevenue";
             this.Text = "fRevenue";
-            this.Load += new System.EventHandler(this.fRevenue_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);

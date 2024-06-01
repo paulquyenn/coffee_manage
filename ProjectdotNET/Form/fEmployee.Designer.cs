@@ -67,6 +67,7 @@
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.RowHeadersWidth = 51;
             this.dgvEmployee.RowTemplate.Height = 24;
+            this.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployee.Size = new System.Drawing.Size(998, 253);
             this.dgvEmployee.TabIndex = 0;
             this.dgvEmployee.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployee_CellEnter);

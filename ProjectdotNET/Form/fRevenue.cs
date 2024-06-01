@@ -19,14 +19,16 @@ namespace ProjectdotNET
 
         COFFEESTOREEntities myCoffeeStore = new COFFEESTOREEntities();
 
+        //Hàm lấy dữ liệu vào DataGridView thống kê
         private void LoadGridDataBillStatistical()
         {
             DateTime datestart = dtStart.Value.Date;
             DateTime dateend = dtEnd.Value.Date;
 
+            //Câu truy vấn dữ liệu hóa đơn
             var query = from item in myCoffeeStore.tblBILL
                         join item1 in myCoffeeStore.tblEMPLOYEE on item.EmployeeID equals item1.EmployeeID
-                        where item.OrderDate >= datestart && item.OrderDate <= dateend
+                        where item.OrderDate >= datestart && item.OrderDate <= dateend && item.Status == "Đã thanh toán"
                         select new 
                         {
                             BillID = item.BillID, 
@@ -37,10 +39,6 @@ namespace ProjectdotNET
                         };
             dgvStatistical.DataSource = query.ToList();
         }
-        private void fRevenue_Load(object sender, EventArgs e)
-        {
-            //LoadGridDataBillStatistical();
-        }
 
         private void btnSum_Click(object sender, EventArgs e)
         {
@@ -49,14 +47,16 @@ namespace ProjectdotNET
             DateTime datestart = dtStart.Value.Date;
             DateTime dateend = dtEnd.Value.Date;
 
+            //Câu truy vấn dữ liệu hóa đơn
             var queryBill = from item in myCoffeeStore.tblBILL
-                        where item.OrderDate >= datestart && item.OrderDate <= dateend
-                        select item;
+                        where item.OrderDate >= datestart && item.OrderDate <= dateend && item.Status == "Đã thanh toán"
+                            select item;
 
+            //Tổng số hóa đơn
             int totalbill = queryBill.Count();
             tbTotalBill.Text = totalbill.ToString();
 
-
+            //Tổng doanh thu
             decimal totalMoney = 0;
             foreach(var item in queryBill)
             {
@@ -68,10 +68,11 @@ namespace ProjectdotNET
             }
             tbTotalRevemue.Text = totalMoney.ToString();
 
+            //Lấy dữ liệu chi tiết sản phẩm bán
             var queryProductMax = from bill in myCoffeeStore.tblBILL
                                   join billInfo in myCoffeeStore.tblBILL_INFO on bill.BillID equals billInfo.BillID
                                   join product in myCoffeeStore.tblPRODUCT on billInfo.ProductID equals product.ProductID
-                                  where bill.OrderDate >= datestart && bill.OrderDate <= dateend
+                                  where bill.OrderDate >= datestart && bill.OrderDate <= dateend && bill.Status == "Đã thanh toán"
                                   group billInfo by new { product.ProductName } into g
                                   select new
                                   {
