@@ -63,7 +63,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(262, 453);
+            this.btnExit.Location = new System.Drawing.Point(262, 439);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(105, 47);
             this.btnExit.TabIndex = 21;
@@ -73,7 +73,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(108, 387);
+            this.btnEdit.Location = new System.Drawing.Point(108, 373);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(105, 47);
             this.btnEdit.TabIndex = 20;
@@ -84,7 +84,7 @@
             // btnCancel
             // 
             this.btnCancel.Enabled = false;
-            this.btnCancel.Location = new System.Drawing.Point(262, 387);
+            this.btnCancel.Location = new System.Drawing.Point(262, 373);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(105, 47);
             this.btnCancel.TabIndex = 19;
@@ -95,7 +95,7 @@
             // btnSave
             // 
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(262, 324);
+            this.btnSave.Location = new System.Drawing.Point(262, 310);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(105, 47);
             this.btnSave.TabIndex = 18;
@@ -105,7 +105,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(108, 453);
+            this.btnDelete.Location = new System.Drawing.Point(108, 439);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(105, 47);
             this.btnDelete.TabIndex = 17;
@@ -115,7 +115,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(108, 324);
+            this.btnAdd.Location = new System.Drawing.Point(108, 310);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(105, 47);
             this.btnAdd.TabIndex = 16;
@@ -243,7 +243,7 @@
             // 
             // btnPay
             // 
-            this.btnPay.Location = new System.Drawing.Point(184, 521);
+            this.btnPay.Location = new System.Drawing.Point(184, 507);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(105, 47);
             this.btnPay.TabIndex = 24;

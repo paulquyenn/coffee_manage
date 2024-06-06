@@ -76,6 +76,13 @@ namespace ProjectdotNET
         {
             AddNew = true;
             setEnable(true);
+            tbEmployeeId.Clear();
+            tbEmployeeName.Clear();
+            tbPhone.Clear();
+            tbAddress.Clear();
+            tbPosition.Clear();
+            tbSalary.Clear();
+            tbDescription.Clear();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

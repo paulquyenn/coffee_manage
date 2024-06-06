@@ -97,6 +97,18 @@ namespace ProjectdotNET
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //kiểm tra dữ liệu nhập vào
+            if (cbEmployeeID.SelectedValue == null)
+            {
+                MessageBox.Show("Thông tin nhân viên không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                goto index;
+            }
+            if (cbTableID.SelectedValue == null)
+            {
+                MessageBox.Show("Thông tin bàn không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                goto index;
+            }
+
             if (AddNew)
             {
                 tblBILL bill = new tblBILL();
@@ -117,9 +129,10 @@ namespace ProjectdotNET
                 bill.EmployeeID = int.Parse(cbEmployeeID.SelectedValue.ToString());
                 bill.OrderDate = dtOrderDate.Value;
                 bill.TableID = int.Parse(cbTableID.Text);
-                bill.Status = cbStatus.Text;
                 myCoffeeStore.SaveChanges();
             }
+
+            index:
             setEnable(false);
             LoadGridDataBill();
             LoadGridDataTableID();
@@ -166,7 +179,7 @@ namespace ProjectdotNET
                             select item;
             if (queryBill.First().Status == "Đã thanh toán")
             {
-                MessageBox.Show("Đơn hàng đã thanh toán", "Thông báo");
+                MessageBox.Show("Đơn hàng đã thanh toán", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

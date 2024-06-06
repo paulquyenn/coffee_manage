@@ -55,6 +55,7 @@
             this.dgvAccount.Name = "dgvAccount";
             this.dgvAccount.RowHeadersWidth = 51;
             this.dgvAccount.RowTemplate.Height = 24;
+            this.dgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAccount.Size = new System.Drawing.Size(598, 571);
             this.dgvAccount.TabIndex = 0;
             this.dgvAccount.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellEnter);

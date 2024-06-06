@@ -29,7 +29,7 @@ namespace ProjectdotNET
             this.MaximizeBox = false;
             this.report_BillTableAdapter.Fill(this.cOFFEESTOREDataSet.Report_Bill, int.Parse(BillID));
             this.report_BillInfoTableAdapter.Fill(this.cOFFEESTOREDataSet.Report_BillInfo, int.Parse(BillID));
-            this.reportViewer1.RefreshReport();
+            this.reportBill.RefreshReport();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -39,15 +39,18 @@ namespace ProjectdotNET
 
         private void btnCompleted_Click(object sender, EventArgs e)
         {
-            int BillId = int.Parse(BillID);
-            var queryBill = from item in myCoffeeStore.tblBILL
-                            where item.BillID == BillId
-                            select item;
+            if(MessageBox.Show("Xác nhận thanh toán", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                int BillId = int.Parse(BillID);
+                var queryBill = from item in myCoffeeStore.tblBILL
+                                where item.BillID == BillId
+                                select item;
 
-            tblBILL bill = queryBill.First();
-            bill.Status = "Đã thanh toán";
-            myCoffeeStore.SaveChanges();
-            this.Close();
+                tblBILL bill = queryBill.First();
+                bill.Status = "Đã thanh toán"; 
+                myCoffeeStore.SaveChanges();
+                this.Close();
+            }
         }
     }
 }

@@ -23,7 +23,12 @@ namespace ProjectdotNET
         private void LoadGridDataBillinfo()
         {
             var queryBillinfo = from item in myCoffeeStore.tblBILL_INFO
-                                select item;
+                                select new
+                                {
+                                    BillID = item.BillID,
+                                    ProductID = item.ProductID,
+                                    Quantity = item.Quantity
+                                };
             dgvBillinfo.DataSource = queryBillinfo.ToList();
         }
 
@@ -84,14 +89,32 @@ namespace ProjectdotNET
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //kiểm tra dữ liệu nhập vào
+            if (cbBillID.SelectedValue == null)
+            {
+                MessageBox.Show("Thông tin mã đơn hàng không đúng!", "Thông báo");
+                goto index;
+            }
+            if(cbProductID.SelectedValue == null)
+            {
+                MessageBox.Show("Thông tin sản phẩm không đúng!", "Thông báo");
+                goto index;
+            }
+            int a;
+            if(tbQuantity.Text.Trim() == "" || !int.TryParse(tbQuantity.Text, out a))
+            {
+                MessageBox.Show("Thông tin số lượng không đúng!", "Thông báo");
+                goto index;
+            }
+
             if (AddNew)
             {
-                tblBILL_INFO Billinfo = new tblBILL_INFO();
-                Billinfo.BillID = int.Parse(cbBillID.SelectedValue.ToString());
-                Billinfo.ProductID = int.Parse(cbProductID.SelectedValue.ToString());
-                Billinfo.Quantity = int.Parse(tbQuantity.Text.ToString());
-                myCoffeeStore.tblBILL_INFO.Add(Billinfo);
-                myCoffeeStore.SaveChanges();
+                string BillID = (cbBillID.SelectedValue.ToString());
+                string ProductID = (cbProductID.SelectedValue.ToString());
+                string Quantity = (tbQuantity.Text.ToString());
+                DBServices db = new DBServices();
+                string sql = string.Format("INSERT INTO tblBILL_INFO VALUES ({0}, {1}, {2})", BillID, ProductID, Quantity);
+                db.runQuery(sql);
                 LoadGridDataBillinfo();
             }
             else
@@ -106,6 +129,7 @@ namespace ProjectdotNET
                 myCoffeeStore.SaveChanges();
                 LoadGridDataBillinfo();
             }
+            index:
             setEnable(false);
         }
 

@@ -23,7 +23,6 @@ namespace ProjectdotNET
         private void setEnable(bool check)
         {
             tbTableID.Enabled = check;
-            cbStatus.Enabled = check;
             btnSave.Enabled = check;
             btnCancel.Enabled = check;
             btnAdd.Enabled = !check;
@@ -64,6 +63,7 @@ namespace ProjectdotNET
         {
             AddNew = true;
             setEnable(true);
+            cbStatus.SelectedIndex = 1;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

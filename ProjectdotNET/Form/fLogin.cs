@@ -44,7 +44,7 @@ namespace ProjectdotNET
             }
             else
             {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
+                MessageBox.Show("Thông tin đăng nhập không đúng!", "Thông báo");
             }
         }
 

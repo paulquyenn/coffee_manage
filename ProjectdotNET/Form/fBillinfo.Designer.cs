@@ -54,7 +54,7 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(81, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(366, 169);
             this.panel1.TabIndex = 31;
@@ -117,7 +117,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(215, 347);
+            this.btnExit.Location = new System.Drawing.Point(290, 382);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(105, 47);
             this.btnExit.TabIndex = 30;
@@ -127,7 +127,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(61, 281);
+            this.btnEdit.Location = new System.Drawing.Point(136, 316);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(105, 47);
             this.btnEdit.TabIndex = 29;
@@ -138,7 +138,7 @@
             // btnCancel
             // 
             this.btnCancel.Enabled = false;
-            this.btnCancel.Location = new System.Drawing.Point(215, 281);
+            this.btnCancel.Location = new System.Drawing.Point(290, 316);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(105, 47);
             this.btnCancel.TabIndex = 28;
@@ -149,7 +149,7 @@
             // btnSave
             // 
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(215, 218);
+            this.btnSave.Location = new System.Drawing.Point(290, 253);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(105, 47);
             this.btnSave.TabIndex = 27;
@@ -159,7 +159,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(61, 347);
+            this.btnDelete.Location = new System.Drawing.Point(136, 382);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(105, 47);
             this.btnDelete.TabIndex = 26;
@@ -169,7 +169,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(61, 218);
+            this.btnAdd.Location = new System.Drawing.Point(136, 253);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(105, 47);
             this.btnAdd.TabIndex = 25;
@@ -180,12 +180,12 @@
             // dgvBillinfo
             // 
             this.dgvBillinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBillinfo.Location = new System.Drawing.Point(395, 12);
+            this.dgvBillinfo.Location = new System.Drawing.Point(576, 12);
             this.dgvBillinfo.Name = "dgvBillinfo";
             this.dgvBillinfo.RowHeadersWidth = 51;
             this.dgvBillinfo.RowTemplate.Height = 24;
             this.dgvBillinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBillinfo.Size = new System.Drawing.Size(627, 571);
+            this.dgvBillinfo.Size = new System.Drawing.Size(384, 571);
             this.dgvBillinfo.TabIndex = 24;
             this.dgvBillinfo.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBillinfo_CellEnter);
             // 

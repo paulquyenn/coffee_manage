@@ -93,6 +93,24 @@ namespace ProjectdotNET
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //kiểm tra dữ liệu nhập vào
+            if (tbProductName.Text.Trim() == "")
+            {
+                MessageBox.Show("Thông tin tên sản phẩm không đúng!", "Thông báo");
+                goto index;
+            }
+            float a;
+            if(tbPrice.Text.Trim() == "" || !float.TryParse(tbPrice.Text.Trim(), out a))
+            {
+                MessageBox.Show("Thông tin giá tiền không đúng!", "Thông báo");
+                goto index;
+            }
+            if(cbCategoryID.SelectedValue == null)
+            {
+                MessageBox.Show("Thông tin loại sản phẩm không đúng!", "Thông báo");
+                goto index;
+            }
+
             if (AddNew)
             {
                 tblPRODUCT product = new tblPRODUCT();
@@ -120,6 +138,7 @@ namespace ProjectdotNET
                 myCoffeeStore.SaveChanges();
                 LoadGridDataProduct();
             }
+            index:
             setEnable(false);
         }
 

@@ -51,6 +51,7 @@
             this.dgvTableADO.Name = "dgvTableADO";
             this.dgvTableADO.RowHeadersWidth = 51;
             this.dgvTableADO.RowTemplate.Height = 24;
+            this.dgvTableADO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTableADO.Size = new System.Drawing.Size(991, 294);
             this.dgvTableADO.TabIndex = 0;
             this.dgvTableADO.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTableADO_CellEnter);
@@ -75,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(649, 35);
+            this.label2.Location = new System.Drawing.Point(512, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 9;
@@ -84,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(149, 35);
+            this.label1.Location = new System.Drawing.Point(256, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 8;
@@ -152,18 +153,19 @@
             // 
             // cbStatus
             // 
+            this.cbStatus.Enabled = false;
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
             "Đặt",
             "Chưa"});
-            this.cbStatus.Location = new System.Drawing.Point(649, 57);
+            this.cbStatus.Location = new System.Drawing.Point(512, 55);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(181, 28);
             this.cbStatus.TabIndex = 1;
             // 
             // tbTableID
             // 
-            this.tbTableID.Location = new System.Drawing.Point(149, 57);
+            this.tbTableID.Location = new System.Drawing.Point(256, 55);
             this.tbTableID.Name = "tbTableID";
             this.tbTableID.Size = new System.Drawing.Size(201, 26);
             this.tbTableID.TabIndex = 0;
